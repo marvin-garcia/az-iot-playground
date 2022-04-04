@@ -27,7 +27,7 @@ namespace SimulatedDevice
         // az iot hub device-identity show-connection-string --hub-name {YourIoTHubName} --device-id MyDotnetDevice --output table
         private static string s_connectionString;
 
-        private static TimeSpan s_telemetryInterval = TimeSpan.FromSeconds(30); // Seconds
+        private static TimeSpan s_heartbeatInterval;
 
         private static async Task Main(string[] args)
         {
@@ -39,6 +39,7 @@ namespace SimulatedDevice
 
             IConfiguration config = builder.Build();
             s_connectionString = config["DeviceConnectionString"];
+            s_heartbeatInterval = TimeSpan.TryParse(config["HeartbeatInterval"], out TimeSpan interval) ? interval : TimeSpan.FromSeconds(5);
 
             // Connect to the IoT hub using the MQTT protocol
             s_deviceClient = DeviceClient.CreateFromConnectionString(s_connectionString, s_transportType);
@@ -123,7 +124,7 @@ namespace SimulatedDevice
 
                 try
                 {
-                    await Task.Delay(s_telemetryInterval, ct);
+                    await Task.Delay(s_heartbeatInterval, ct);
                 }
                 catch (TaskCanceledException)
                 {
