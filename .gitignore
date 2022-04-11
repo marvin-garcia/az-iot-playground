@@ -349,3 +349,4 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 appsettings.json
+/iot-plug-and-play/digital-twins-ingestion/DigitalTwinsFunction/DigitalTwinsFunction/Properties
