@@ -26,18 +26,16 @@ namespace DigitalTwinsFunction
 
             try
             {
-                // Authenticate with Digital Twins
-                var cred = new ManagedIdentityCredential("https://digitaltwins.azure.net");
-                var client = new DigitalTwinsClient(
+                var credentials = new DefaultAzureCredential();
+                DigitalTwinsClient client = new DigitalTwinsClient(
                     new Uri(adtInstanceUrl),
-                    cred,
+                    credentials,
                     new DigitalTwinsClientOptions { Transport = new HttpClientTransport(httpClient) });
+
                 log.LogInformation($"ADT service client connection created.");
 
                 if (eventGridEvent != null && eventGridEvent.Data != null)
                 {
-                    //log.LogInformation(eventGridEvent.Data.ToString());
-
                     JObject deviceMessage = (JObject)JsonConvert.DeserializeObject(eventGridEvent.Data.ToString());
                     string deviceId = (string)deviceMessage["systemProperties"]["iothub-connection-device-id"];
                     string deviceBody = (string)deviceMessage["body"];
@@ -46,67 +44,67 @@ namespace DigitalTwinsFunction
                     //log.LogInformation($"Encoded Body: {deviceBody}");
                     //log.LogInformation($"Decoded Body: {body}");
 
-                    var updateTwinData = new JsonPatchDocument();
-
                     // Temperature
                     if (body.ContainsKey("temperature"))
                     {
                         var temperature = body["temperature"];
                         log.LogInformation($"Device:{deviceId} Temperature is:{temperature}");
-                        updateTwinData.AppendReplace("/temperature", temperature.Value<double>());
+
+                        var updateTwinData = new JsonPatchDocument();
+                        updateTwinData.AppendReplace("/Temperature", temperature.Value<double>());
 
                         await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
                     }
 
-                    // Humidity
-                    if (body.ContainsKey("humidity"))
-                    {
-                        var humidity = body["humidity"];
-                        log.LogInformation($"Device:{deviceId} humidity is:{humidity}");
-                        updateTwinData.AppendReplace("/humidity", humidity.Value<double>());
+                    //// Humidity
+                    //if (body.ContainsKey("humidity"))
+                    //{
+                    //    var humidity = body["humidity"];
+                    //    log.LogInformation($"Device:{deviceId} humidity is:{humidity}");
+                    //    updateTwinData.AppendReplace("/Humidity", humidity.Value<double>());
 
-                        await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
-                    }
+                    //    await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
+                    //}
 
-                    // Pressure
-                    if (body.ContainsKey("pressure"))
-                    {
-                        var pressure = body["pressure"];
-                        log.LogInformation($"Device:{deviceId} pressure is:{pressure}");
-                        updateTwinData.AppendReplace("/pressure", pressure.Value<double>());
+                    //// Pressure
+                    //if (body.ContainsKey("pressure"))
+                    //{
+                    //    var pressure = body["pressure"];
+                    //    log.LogInformation($"Device:{deviceId} pressure is:{pressure}");
+                    //    updateTwinData.AppendReplace("/Pressure", pressure.Value<double>());
 
-                        await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
-                    }
+                    //    await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
+                    //}
 
-                    // magnetometerX
-                    if (body.ContainsKey("magnetometerX"))
-                    {
-                        var magnetometerX = body["magnetometerX"];
-                        log.LogInformation($"Device:{deviceId} X magnetometer is:{magnetometerX}");
-                        updateTwinData.AppendReplace("/magnetometerX", magnetometerX.Value<double>());
+                    //// magnetometerX
+                    //if (body.ContainsKey("magnetometerX"))
+                    //{
+                    //    var magnetometerX = body["magnetometerX"];
+                    //    log.LogInformation($"Device:{deviceId} X magnetometer is:{magnetometerX}");
+                    //    updateTwinData.AppendReplace("/MagnetometerX", magnetometerX.Value<double>());
 
-                        await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
-                    }
+                    //    await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
+                    //}
 
-                    // magnetometerY
-                    if (body.ContainsKey("magnetometerY"))
-                    {
-                        var magnetometerY = body["magnetometerY"];
-                        log.LogInformation($"Device:{deviceId} Y magnetometer is:{magnetometerY}");
-                        updateTwinData.AppendReplace("/magnetometerY", magnetometerY.Value<double>());
+                    //// magnetometerY
+                    //if (body.ContainsKey("magnetometerY"))
+                    //{
+                    //    var magnetometerY = body["magnetometerY"];
+                    //    log.LogInformation($"Device:{deviceId} Y magnetometer is:{magnetometerY}");
+                    //    updateTwinData.AppendReplace("/MagnetometerY", magnetometerY.Value<double>());
 
-                        await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
-                    }
+                    //    await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
+                    //}
 
-                    // magnetometerZ
-                    if (body.ContainsKey("magnetometerZ"))
-                    {
-                        var magnetometerZ = body["magnetometerZ"];
-                        log.LogInformation($"Device:{deviceId} Z magnetometer is:{magnetometerZ}");
-                        updateTwinData.AppendReplace("/magnetometerZ", magnetometerZ.Value<double>());
+                    //// magnetometerZ
+                    //if (body.ContainsKey("magnetometerZ"))
+                    //{
+                    //    var magnetometerZ = body["magnetometerZ"];
+                    //    log.LogInformation($"Device:{deviceId} Z magnetometer is:{magnetometerZ}");
+                    //    updateTwinData.AppendReplace("/MagnetometerZ", magnetometerZ.Value<double>());
 
-                        await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
-                    }
+                    //    await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
+                    //}
                 }
             }
             catch (Exception ex)
