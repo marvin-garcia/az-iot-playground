@@ -7,7 +7,7 @@
 	"contents": [
 		{
 			"@type": [
-				"Telemetry",
+				"Property",
 				"Temperature"
 			],
 			"name": "temperature",
@@ -17,7 +17,7 @@
 		},
 		{
 			"@type": [
-				"Telemetry",
+				"Property",
 				"RelativeHumidity"
 			],
 			"name": "humidity",
@@ -27,7 +27,7 @@
 		},
 		{
 			"@type": [
-				"Telemetry",
+				"Property",
 				"Pressure"
 			],
 			"name": "pressure",
@@ -36,26 +36,26 @@
 			"schema": "double"
 		},
 		{
-			"@type": "Telemetry",
+			"@type": "Property",
 			"name": "magnetometerX",
 			"displayName": "Magnetometer X / mgauss",
 			"schema": "double"
 		},
 		{
-			"@type": "Telemetry",
+			"@type": "Property",
 			"name": "magnetometerY",
 			"displayName": "Magnetometer Y / mgauss",
 			"schema": "double"
 		},
 		{
-			"@type": "Telemetry",
+			"@type": "Property",
 			"name": "magnetometerZ",
 			"displayName": "Magnetometer Z / mgauss",
 			"schema": "double"
 		},
 		{
 			"@type": [
-				"Telemetry",
+				"Property",
 				"Acceleration"
 			],
 			"name": "accelerometerX",
@@ -65,7 +65,7 @@
 		},
 		{
 			"@type": [
-				"Telemetry",
+				"Property",
 				"Acceleration"
 			],
 			"name": "accelerometerY",
@@ -75,7 +75,7 @@
 		},
 		{
 			"@type": [
-				"Telemetry",
+				"Property",
 				"Acceleration"
 			],
 			"name": "accelerometerZ",
@@ -85,7 +85,7 @@
 		},
 		{
 			"@type": [
-				"Telemetry",
+				"Property",
 				"AngularVelocity"
 			],
 			"name": "gyroscopeX",
@@ -95,7 +95,7 @@
 		},
 		{
 			"@type": [
-				"Telemetry",
+				"Property",
 				"AngularVelocity"
 			],
 			"name": "gyroscopeY",
@@ -105,7 +105,7 @@
 		},
 		{
 			"@type": [
-				"Telemetry",
+				"Property",
 				"AngularVelocity"
 			],
 			"name": "gyroscopeZ",

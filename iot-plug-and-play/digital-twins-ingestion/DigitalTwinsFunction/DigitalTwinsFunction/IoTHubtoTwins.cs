@@ -18,22 +18,7 @@ namespace DigitalTwinsFunction
     {
         private static readonly string adtInstanceUrl = Environment.GetEnvironmentVariable("ADT_SERVICE_URL");
         private static readonly HttpClient httpClient = new HttpClient();
-        private static readonly string[] deviceProperties = new[] 
-        { 
-            "Temperature",
-            "Pressure",
-            "Humidity",
-            "magnetometerX",
-            "magnetometerY",
-            "magnetometerZ",
-            "accelerometerX",
-            "accelerometerY",
-            "accelerometerZ",
-            "gyroscopeX",
-            "gyroscopeY",
-            "gyroscopeZ" 
-        };
-
+        
         [FunctionName("IoTHubtoTwins")]
         public async Task Run([EventGridTrigger] EventGridEvent eventGridEvent, ILogger log)
         {
@@ -57,16 +42,21 @@ namespace DigitalTwinsFunction
                     string deviceBody = (string)deviceMessage["body"];
                     JObject body = JsonConvert.DeserializeObject<JObject>(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(deviceBody)));
 
-                    //var updateTwinData = new JsonPatchDocument();
+                    // Comment if PnP uses telemetry
+                    var updateTwinData = new JsonPatchDocument();
                     foreach (var property in body.Properties())
                     {
                         log.LogInformation($"Device: {deviceId} | {property.Name}: {body.GetValue(property.Name)}");
-                        //updateTwinData.AppendReplace($"/{deviceProperty}", propertyValue.Value<double>());
+                        
+                        // Comment if PnP uses telemetry
+                        updateTwinData.AppendReplace($"/{property.Name}", body.GetValue(property.Name).Value<double>());
 
-                        await client.PublishTelemetryAsync(deviceId, Guid.NewGuid().ToString(), $"{{ \"{property.Name}\": {body.GetValue(property.Name).Value<double>()} }}");
+                        // Uncomment if PnP uses telemetry
+                        //await client.PublishTelemetryAsync(deviceId, Guid.NewGuid().ToString(), $"{{ \"{property.Name}\": {body.GetValue(property.Name).Value<double>()} }}");
                     }
 
-                    //await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
+                    // Comment if PnP uses telemetry
+                    await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
                 }
             }
             catch (Exception ex)
