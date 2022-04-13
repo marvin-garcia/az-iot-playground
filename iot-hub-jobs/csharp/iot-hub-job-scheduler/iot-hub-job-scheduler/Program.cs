@@ -37,6 +37,8 @@ namespace iot_hub_job_scheduler
 
             string methodJobId = Guid.NewGuid().ToString();
             string queryCondition = $"DeviceId IN {JsonConvert.SerializeObject(s_deviceIds)}".Replace('"', '\'');
+
+            Console.WriteLine($"Starting job Id {methodJobId}");
             await StartMethodJob(s_directMethodName, methodJobId, queryCondition);
             MonitorJob(methodJobId).Wait();
             
