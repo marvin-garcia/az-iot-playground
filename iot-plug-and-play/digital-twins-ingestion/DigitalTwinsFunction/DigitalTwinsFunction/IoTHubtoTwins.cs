@@ -18,7 +18,11 @@ namespace DigitalTwinsFunction
     {
         private static readonly string adtInstanceUrl = Environment.GetEnvironmentVariable("ADT_SERVICE_URL");
         private static readonly HttpClient httpClient = new HttpClient();
-        
+        private static readonly string[] simDevices = Environment.GetEnvironmentVariable("SimulatedDeviceIds").Split(',');
+        private static readonly int minSimThreshold = 3;
+        private static readonly int maxSimThreshold = 15;
+        private static readonly Random random = new Random();
+
         [FunctionName("IoTHubtoTwins")]
         public async Task Run([EventGridTrigger] EventGridEvent eventGridEvent, ILogger log)
         {
@@ -42,6 +46,7 @@ namespace DigitalTwinsFunction
                     string deviceBody = (string)deviceMessage["body"];
                     JObject body = JsonConvert.DeserializeObject<JObject>(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(deviceBody)));
 
+                    #region update device twin properties
                     // Comment if PnP uses telemetry
                     var updateTwinData = new JsonPatchDocument();
                     foreach (var property in body.Properties())
@@ -54,9 +59,33 @@ namespace DigitalTwinsFunction
                         // Uncomment if PnP uses telemetry
                         //await client.PublishTelemetryAsync(deviceId, Guid.NewGuid().ToString(), $"{{ \"{property.Name}\": {body.GetValue(property.Name).Value<double>()} }}");
                     }
-
+                    
                     // Comment if PnP uses telemetry
                     await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
+                    #endregion
+
+                    #region update properties for simulated devices (if any)
+                    foreach (var device in simDevices)
+                    {
+                        updateTwinData = new JsonPatchDocument();
+                        foreach (var property in body.Properties())
+                        {
+                            log.LogInformation($"Sim device: {device} | {property.Name}: {body.GetValue(property.Name)}");
+
+                            // Comment if PnP uses telemetry
+                            double r = random.Next(minSimThreshold, maxSimThreshold);
+                            double propertyValue = body.GetValue(property.Name).Value<double>() * r / 10;
+                            updateTwinData.AppendReplace($"/{property.Name}", propertyValue);
+
+                            // Uncomment if PnP uses telemetry
+                            //await client.PublishTelemetryAsync(deviceId, Guid.NewGuid().ToString(), $"{{ \"{property.Name}\": {propertyValue} }}");
+                        }
+
+                        // Comment if PnP uses telemetry
+                        var response = await client.UpdateDigitalTwinAsync(device, updateTwinData);
+                        log.LogInformation($"Response: {response.Status}. {response.Content}");
+                    }
+                    #endregion
                 }
             }
             catch (Exception ex)
