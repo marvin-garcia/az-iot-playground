@@ -1,0 +1,36 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:digital_transportation:fleet;1",
+    "@type": "Interface",
+    "displayName": "Fleet",
+    "description": "Example model for a transportation fleet",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "FleetId",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "FleetName",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "Tags",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "@id": "dtmi:digital_transportation:truck:rel_has_trucks;1",
+        "name": "rel_has_trucks",
+        "displayName": "Has Trucks",
+        "target": "dtmi:digital_transportation:truck;1"
+      }
+    ]
+  }
+]

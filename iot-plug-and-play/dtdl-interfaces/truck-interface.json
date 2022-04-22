@@ -1,0 +1,65 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:digital_transportation:truck;1",
+    "@type": "Interface",
+    "displayName": "Truck",
+    "description": "Example model for a truck",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "TruckId",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "SerialNumber",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "Type",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "Tags",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "LineOperationStatus",
+        "schema": "dtmi:digital_transportation:truck:status;1",
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "@id": "dtmi:digital_transportation:truck:rel_has_sensors;1",
+        "name": "rel_has_sensors",
+        "displayName": "Has Sensors",
+        "target": "dtmi:azurertos:devkit:gsgmxchip;2"
+      }
+    ],
+    "schemas":  {
+      "@id": "dtmi:digital_transportation:truck:status;1",
+      "@type": "Enum",
+      "valueSchema": "integer",
+      "enumValues": [
+        {
+          "name": "offline",
+          "displayName": "Offline",
+          "enumValue": 1
+        },
+        {
+          "name": "online",
+          "displayName": "Online",
+          "enumValue": 2
+        }
+      ]
+    }
+  }
+]

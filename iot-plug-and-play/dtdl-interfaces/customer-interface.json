@@ -1,0 +1,42 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:digital_transportation:customer;1",
+    "@type": "Interface",
+    "displayName": "Customer",
+    "description": "Example model for a transportation customer",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "CustomerId",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "CustomerName",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "Country",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "Tags",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "@id": "dtmi:digital_transportation:truck:rel_has_fleets;1",
+        "name": "rel_has_fleets",
+        "displayName": "Has Fleets",
+        "target": "dtmi:digital_transportation:fleet;1"
+      }
+    ]
+  }
+]
