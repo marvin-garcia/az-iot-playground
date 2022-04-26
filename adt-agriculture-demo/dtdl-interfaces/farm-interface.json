@@ -1,0 +1,30 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:digital_agriculture:farm;1",
+    "@type": "Interface",
+    "displayName": "Farm",
+    "description": "Example model for an agriculture farm",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "FarmId",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "Tags",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "@id": "dtmi:digital_agriculture:farm:rel_has_tractors;1",
+        "name": "rel_has_tractors",
+        "displayName": "Has Tractors",
+        "target": "dtmi:digital_agriculture:tractor;1"
+      }
+    ]
+  }
+]

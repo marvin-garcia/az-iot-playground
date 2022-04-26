@@ -1,0 +1,91 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:digital_agriculture:tractor;2",
+    "@type": "Interface",
+    "displayName": "Tractor",
+    "description": "Example model for a truck",
+    "contents": [
+      {
+        "@id": "dtmi:digital_agriculture:tractor:battery;1",
+        "@type": [
+          "Property",
+          "Power"
+        ],
+        "displayName": "battery",
+        "name": "battery",
+        "schema": "double",
+        "unit": "kilowatt"
+      },
+      {
+        "@id": "dtmi:digital_agriculture:tractor:velocity;1",
+        "@type": [
+          "Property",
+          "Velocity"
+        ],
+        "displayName": "velocity",
+        "name": "velocity",
+        "schema": "double",
+        "unit": "milePerHour"
+      },
+      {
+        "@id": "dtmi:digital_agriculture:tractor:harvestingDrumRpm;1",
+        "@type": [
+          "Property",
+          "Rpm"
+        ],
+        "displayName": "harvestingDrumRpm",
+        "name": "harvestingDrumRpm",
+        "schema": "double",
+        "unit": "revolutionPerMinute"
+      },
+      {
+        "@id": "dtmi:digital_agriculture:tractor:harvestedArea;1",
+        "@type": [
+          "Property",
+          "Area"
+        ],
+        "displayName": "harvestedArea",
+        "name": "harvestedArea",
+        "schema": "double",
+        "unit": "hectare"
+      },
+      {
+        "@id": "dtmi:digital_agriculture:tractor:grainTankVolume;1",
+        "@type": [
+          "Property",
+          "Volume"
+        ],
+        "displayName": "grainTankVolume",
+        "name": "grainTankVolume",
+        "schema": "double",
+        "unit": "cubicMetre"
+      },
+      {
+        "@id": "dtmi:digital_agriculture:tractor:state;1",
+        "@type": "Property",
+        "displayName": "state",
+        "name": "state",
+        "schema": "string"
+      },
+      {
+        "@type": [
+          "Property",
+          "Latitude"
+        ],
+        "name": "latitude",
+        "schema": "double",
+        "unit": "degreeOfArc"
+      },
+      {
+        "@type": [
+          "Property",
+          "Longitude"
+        ],
+        "name": "longitude",
+        "schema": "double",
+        "unit": "degreeOfArc"
+      }
+    ]
+  }
+]
