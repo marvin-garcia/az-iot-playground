@@ -3,507 +3,7 @@
     {
       "comms": [
         {
-          "_id": "776ef7ea-3760-4061-a8e3-2d091c390190",
-          "_type": "property",
-          "name": "random",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#3e2e12",
-          "enabled": true,
-          "string": false,
-          "value": "AUTO_DOUBLE",
-          "sdk": "msg",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          }
-        },
-        {
-          "_id": "3a363c92-71a5-4a51-afa8-ba1dfc6e6148",
-          "_type": "property",
-          "name": "inc",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#3e2e12",
-          "enabled": true,
-          "string": false,
-          "value": "AUTO_DOUBLE",
-          "sdk": "msg",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          }
-        },
-        {
-          "_id": "e550cbeb-c09a-4719-8f7c-7d851d5ee2e1",
-          "_type": "property",
-          "name": "dec",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#3e2e12",
-          "enabled": true,
-          "string": false,
-          "value": "AUTO_DOUBLE",
-          "sdk": "msg",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          }
-        },
-        {
-          "_id": "f058dbda-f920-4349-a471-1c0cb6e5549b",
-          "_type": "method",
-          "execution": "direct",
-          "enabled": true,
-          "name": "reboot",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#3a1e1e",
-          "status": "200",
-          "receivedParams": null,
-          "asProperty": false,
-          "payload": "{\n  \"result\": \"OK\"\n}"
-        },
-        {
-          "_id": "ed9c880a-3c1d-4f2a-b377-e03d531ff123",
-          "_type": "method",
-          "execution": "direct",
-          "enabled": true,
-          "name": "firmware",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#3a1e1e",
-          "status": "200",
-          "receivedParams": null,
-          "asProperty": false,
-          "payload": "{\n  \"result\": \"OK\"\n}"
-        },
-        {
-          "_id": "8f7259a5-422a-4db9-bb94-b0c38f09d4c4",
-          "_type": "method",
-          "execution": "direct",
-          "enabled": true,
-          "name": "shutdown",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#3a1e1e",
-          "status": "200",
-          "receivedParams": null,
-          "asProperty": false,
-          "payload": "{\n  \"result\": \"OK\"\n}"
-        },
-        {
-          "_id": "89378190-e00e-4af5-ba50-d500260d6bf6",
-          "_type": "property",
-          "name": "info",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#333",
-          "enabled": true,
-          "string": true,
-          "value": "AUTO_STRING",
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "mins",
-            "value": 5,
-            "valueMax": 60
-          }
-        },
-        {
-          "_id": "059ab64a-e531-4b73-8922-d5f4f8f66b85",
-          "_type": "property",
-          "name": "location",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#333",
-          "enabled": true,
-          "string": false,
-          "value": "AUTO_GEOPOINT",
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "mins",
-            "value": 5,
-            "valueMax": 60
-          }
-        },
-        {
-          "_id": "b6ca06c3-df8a-4d53-b0f3-4597293692d2",
-          "_type": "property",
-          "name": "setting",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#333",
-          "enabled": true,
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "_ms": 0,
-            "include": false,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          },
-          "_matchedId": "3531098d-ab9b-4b81-9594-058a4c9a7e93"
-        },
-        {
-          "_id": "3531098d-ab9b-4b81-9594-058a4c9a7e93",
-          "_type": "property",
-          "enabled": true,
-          "name": "setting",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#383a1e",
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "c2d"
-          },
-          "_matchedId": "b6ca06c3-df8a-4d53-b0f3-4597293692d2",
-          "asProperty": true,
-          "asPropertyId": "b6ca06c3-df8a-4d53-b0f3-4597293692d2",
-          "asPropertyConvention": true,
-          "asPropertyVersion": true,
-          "asPropertyVersionPayload": "{\n  \"value\": \"DESIRED_VALUE\",\n  \"ac\": 200,\n  \"ad\": \"completed\",\n  \"av\": \"DESIRED_VERSION\"\n}"
-        },
-        {
-          "_id": "164fa0ce-13a9-48cf-a6c0-e4ad4f4b3b87",
-          "_type": "property",
-          "name": "complex",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#333",
-          "enabled": true,
-          "string": false,
-          "value": 0,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "templated",
-            "template": "{\n  \"compDbl\": \"AUTO_DOUBLE\",\n  \"compStr\": \"AUTO_STRING\",\n  \"compBln\": \"AUTO_BOOLEAN\"\n}"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "_ms": 0,
-            "include": false,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          },
-          "_matchedId": "2883deba-a1fe-4c4a-ae4d-d7a9c90d37c6"
-        },
-        {
-          "_id": "2883deba-a1fe-4c4a-ae4d-d7a9c90d37c6",
-          "_type": "property",
-          "enabled": true,
-          "name": "complex",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#383a1e",
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "templated",
-            "template": "{\n  \"compDbl\": \"AUTO_DOUBLE\",\n  \"compStr\": \"AUTO_STRING\",\n  \"compBln\": \"AUTO_BOOLEAN\"\n}"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "c2d"
-          },
-          "_matchedId": "164fa0ce-13a9-48cf-a6c0-e4ad4f4b3b87",
-          "asProperty": true,
-          "asPropertyId": "164fa0ce-13a9-48cf-a6c0-e4ad4f4b3b87",
-          "asPropertyConvention": true,
-          "asPropertyVersion": true,
-          "asPropertyVersionPayload": "{\n  \"value\": \"DESIRED_VALUE\",\n  \"ac\": 200,\n  \"ad\": \"completed\",\n  \"av\": \"DESIRED_VERSION\"\n}"
-        },
-        {
-          "_id": "df814f2a-34ea-464c-b464-3a7f6d014f33",
-          "_type": "property",
-          "name": "enum",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#3e2e12",
-          "enabled": true,
-          "string": true,
-          "value": "AUTO_ENUM/[\"a\",\"b\",\"c\"]",
-          "sdk": "msg",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          }
-        },
-        {
-          "_id": "823339a4-ab38-4eeb-ada1-10d324108850",
-          "_type": "property",
-          "name": "eventInfo",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#3e2e12",
-          "enabled": true,
-          "string": true,
-          "value": "AUTO_STRING",
-          "sdk": "msg",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          }
-        },
-        {
-          "_id": "2cf4cf2b-e1de-4279-a396-64b8110134d7",
-          "_type": "property",
-          "name": "hashMap",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#333",
-          "enabled": true,
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "_ms": 0,
-            "include": false,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          },
-          "_matchedId": "5a0c688c-e0a1-4e85-b28b-0399619d7d9f"
-        },
-        {
-          "_id": "5a0c688c-e0a1-4e85-b28b-0399619d7d9f",
-          "_type": "property",
-          "enabled": true,
-          "name": "hashMap",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#383a1e",
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "c2d"
-          },
-          "_matchedId": "2cf4cf2b-e1de-4279-a396-64b8110134d7",
-          "asProperty": true,
-          "asPropertyId": "2cf4cf2b-e1de-4279-a396-64b8110134d7",
-          "asPropertyConvention": true,
-          "asPropertyVersion": true,
-          "asPropertyVersionPayload": "{\n  \"value\": \"DESIRED_VALUE\",\n  \"ac\": 200,\n  \"ad\": \"completed\",\n  \"av\": \"DESIRED_VERSION\"\n}"
-        },
-        {
-          "_id": "6468870b-5b6e-4d44-8464-c6aacbb38cac",
-          "_type": "property",
-          "name": "boolean",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#3e2e12",
-          "enabled": true,
-          "string": false,
-          "value": "AUTO_BOOLEAN",
-          "sdk": "msg",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          }
-        },
-        {
-          "_id": "d72c8ab7-0791-4f9a-8afa-f0082a2d4bfe",
-          "_type": "property",
-          "name": "heartbeat",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#3e2e12",
-          "enabled": true,
-          "string": true,
-          "value": "AUTO_DATETIME",
-          "sdk": "msg",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          }
-        }
-      ],
-      "configuration": {
-        "_kind": "template",
-        "deviceId": "3fc17758-580c-4a9f-a69f-3faab0e7b565",
-        "mockDeviceName": "mock-device",
-        "mockDeviceCloneId": "",
-        "connectionString": "",
-        "scopeId": "",
-        "dpsPayload": "",
-        "sasKey": "",
-        "isMasterKey": false,
-        "capabilityUrn": "dtmi:codetunez:root;1",
-        "plugIn": ""
-      },
-      "_id": "3fc17758-580c-4a9f-a69f-3faab0e7b565",
-      "plan": {
-        "startup": [],
-        "timeline": [],
-        "receive": [],
-        "random": []
-      }
-    },
-    {
-      "comms": [
-        {
-          "_id": "143d1136-e9f5-4c6c-ab96-b6194463ac81",
+          "_id": "3df1edaa-f389-41e3-92fd-154c84b1db08",
           "_type": "property",
           "name": "battery",
           "component": {
@@ -528,13 +28,58 @@
             "unit": "secs",
             "value": 30,
             "valueMax": 90,
-            "_ms": 33000
+            "onStartUp": true
           }
         },
         {
-          "_id": "f9a2ddfc-66aa-4494-b7bd-c3c4ddc822ed",
+          "_id": "04b1b145-cdd9-4dea-978d-644072b6f6dc",
           "_type": "property",
-          "name": "fan",
+          "name": "velocity",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": true,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true
+          },
+          "mock": {
+            "_id": "e0fde62e-0209-450a-ba4c-62c4885aae43",
+            "_hasState": false,
+            "_type": "fan",
+            "_value": 0,
+            "init": "10",
+            "variance": 2.5,
+            "running": "35",
+            "timeToRunning": "10",
+            "_resx": {
+              "init": "Initial",
+              "running": "Expected",
+              "variance": "Varies %",
+              "timeToRunning": "Starts"
+            }
+          }
+        },
+        {
+          "_id": "0201f9fc-7689-487b-941b-16f07de1b4b0",
+          "_type": "property",
+          "name": "harvestingDrumRpm",
           "component": {
             "enabled": false,
             "name": "Component"
@@ -557,13 +102,13 @@
             "unit": "secs",
             "value": 30,
             "valueMax": 90,
-            "_ms": 86000
+            "onStartUp": true
           }
         },
         {
-          "_id": "8465c52e-ccca-4c57-93b2-5d1638a1422f",
+          "_id": "6fa9b389-e6a4-4614-80ed-40ecb20925bc",
           "_type": "property",
-          "name": "hotplate",
+          "name": "harvestedArea",
           "component": {
             "enabled": false,
             "name": "Component"
@@ -571,14 +116,14 @@
           "color": "#3e2e12",
           "enabled": true,
           "string": false,
-          "value": "AUTO_DOUBLE",
+          "value": "",
           "sdk": "msg",
           "propertyObject": {
             "type": "default"
           },
           "version": 0,
           "type": {
-            "mock": false,
+            "mock": true,
             "direction": "d2c"
           },
           "runloop": {
@@ -586,13 +131,27 @@
             "unit": "secs",
             "value": 30,
             "valueMax": 90,
-            "_ms": 69000
+            "onStartUp": true
+          },
+          "mock": {
+            "_id": "a0e6d644-3adb-48fb-a401-f4fd9545bb69",
+            "_hasState": false,
+            "_type": "inc",
+            "_value": 0,
+            "variance": 1,
+            "init": 0,
+            "reset": null,
+            "_resx": {
+              "init": "Initial",
+              "variance": "Step",
+              "reset": "Reset"
+            }
           }
         },
         {
-          "_id": "c8dd0eee-b57e-4d03-8fb4-49c7dadf0692",
+          "_id": "b4a35970-849f-49a4-85a0-713493c4964d",
           "_type": "property",
-          "name": "random",
+          "name": "grainTankVolume",
           "component": {
             "enabled": false,
             "name": "Component"
@@ -600,14 +159,14 @@
           "color": "#3e2e12",
           "enabled": true,
           "string": false,
-          "value": "AUTO_DOUBLE",
+          "value": "",
           "sdk": "msg",
           "propertyObject": {
             "type": "default"
           },
           "version": 0,
           "type": {
-            "mock": false,
+            "mock": true,
             "direction": "d2c"
           },
           "runloop": {
@@ -615,157 +174,36 @@
             "unit": "secs",
             "value": 30,
             "valueMax": 90,
-            "_ms": 46000
+            "onStartUp": true
+          },
+          "mock": {
+            "_id": "d50b3a22-6775-47ea-831e-d03d193bf63b",
+            "_hasState": false,
+            "_type": "dec",
+            "_value": 10000,
+            "variance": "10",
+            "init": "10000000",
+            "reset": null,
+            "_resx": {
+              "init": "Initial",
+              "variance": "Step",
+              "reset": "Reset"
+            }
           }
         },
         {
-          "_id": "30163ddb-722f-4fc0-a095-6bcdcb1be0e3",
-          "_type": "property",
-          "name": "inc",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#3e2e12",
-          "enabled": true,
-          "string": false,
-          "value": "AUTO_DOUBLE",
-          "sdk": "msg",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90,
-            "_ms": 46000
-          }
-        },
-        {
-          "_id": "66df606e-f27c-408a-9b2f-8706c4e887a6",
-          "_type": "property",
-          "name": "dec",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#3e2e12",
-          "enabled": true,
-          "string": false,
-          "value": "AUTO_DOUBLE",
-          "sdk": "msg",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90,
-            "_ms": 30000
-          }
-        },
-        {
-          "_id": "188dc743-6a26-4f89-8da3-fc90702ae842",
-          "_type": "method",
-          "execution": "direct",
-          "enabled": true,
-          "name": "reboot",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#3a1e1e",
-          "status": "200",
-          "receivedParams": null,
-          "asProperty": false,
-          "payload": "{\n  \"result\": \"OK\"\n}"
-        },
-        {
-          "_id": "b2582911-1a6a-409e-ba02-c38dbefd0cc9",
-          "_type": "method",
-          "execution": "direct",
-          "enabled": true,
-          "name": "firmware",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#3a1e1e",
-          "status": "200",
-          "receivedParams": null,
-          "asProperty": false,
-          "payload": "{\n  \"result\": \"OK\"\n}"
-        },
-        {
-          "_id": "762831cb-bba7-44f9-bf3b-bc4473da2e88",
-          "_type": "method",
-          "execution": "direct",
-          "enabled": true,
-          "name": "shutdown",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#3a1e1e",
-          "status": "200",
-          "receivedParams": null,
-          "asProperty": false,
-          "payload": "{\n  \"result\": \"OK\"\n}"
-        },
-        {
-          "_id": "70b3a8db-231b-4d42-8b20-c3fde10a2fbb",
-          "_type": "property",
-          "name": "info",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#333",
-          "enabled": true,
-          "string": true,
-          "value": "AUTO_STRING",
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "mins",
-            "value": 5,
-            "valueMax": 60,
-            "_ms": 1680000
-          }
-        },
-        {
-          "_id": "c225e47c-4a9d-4bf2-ae61-8e72756e388b",
+          "_id": "4f390ee1-f5cc-4e5a-98cf-fc33bcd94453",
           "_type": "property",
           "name": "location",
           "component": {
             "enabled": false,
             "name": "Component"
           },
-          "color": "#333",
+          "color": "#3e2e12",
           "enabled": true,
           "string": false,
           "value": "AUTO_GEOPOINT",
-          "sdk": "twin",
+          "sdk": "msg",
           "propertyObject": {
             "type": "default"
           },
@@ -776,134 +214,16 @@
           },
           "runloop": {
             "include": true,
-            "unit": "mins",
-            "value": 5,
+            "unit": "secs",
+            "value": "30",
             "valueMax": 60,
-            "_ms": 2760000
+            "onStartUp": true
           }
         },
         {
-          "_id": "14ed4799-4b41-4ce8-b8c3-7d9f51183a6b",
+          "_id": "2fcc2ad7-d002-4165-a6f3-9f46d90f19e4",
           "_type": "property",
-          "name": "setting",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#333",
-          "enabled": true,
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "_ms": 0,
-            "include": false,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          },
-          "_matchedId": "3531098d-ab9b-4b81-9594-058a4c9a7e93"
-        },
-        {
-          "_id": "5355771a-740e-48fd-ac67-e2621951e249",
-          "_type": "property",
-          "enabled": true,
-          "name": "setting",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#383a1e",
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "c2d"
-          },
-          "_matchedId": "b6ca06c3-df8a-4d53-b0f3-4597293692d2",
-          "asProperty": true,
-          "asPropertyId": "14ed4799-4b41-4ce8-b8c3-7d9f51183a6b",
-          "asPropertyConvention": true,
-          "asPropertyVersion": true,
-          "asPropertyVersionPayload": "{\n  \"value\": \"DESIRED_VALUE\",\n  \"ac\": 200,\n  \"ad\": \"completed\",\n  \"av\": \"DESIRED_VERSION\"\n}"
-        },
-        {
-          "_id": "539865fa-93de-4008-925c-b4c711caa290",
-          "_type": "property",
-          "name": "complex",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#333",
-          "enabled": true,
-          "string": false,
-          "value": 0,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "templated",
-            "template": "{\n  \"compDbl\": \"AUTO_DOUBLE\",\n  \"compStr\": \"AUTO_STRING\",\n  \"compBln\": \"AUTO_BOOLEAN\"\n}"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "_ms": 0,
-            "include": false,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          },
-          "_matchedId": "2883deba-a1fe-4c4a-ae4d-d7a9c90d37c6"
-        },
-        {
-          "_id": "ef6be41e-9046-4bf7-badc-e77c8a9d779f",
-          "_type": "property",
-          "enabled": true,
-          "name": "complex",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#383a1e",
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "templated",
-            "template": "{\n  \"compDbl\": \"AUTO_DOUBLE\",\n  \"compStr\": \"AUTO_STRING\",\n  \"compBln\": \"AUTO_BOOLEAN\"\n}"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "c2d"
-          },
-          "_matchedId": "164fa0ce-13a9-48cf-a6c0-e4ad4f4b3b87",
-          "asProperty": true,
-          "asPropertyId": "539865fa-93de-4008-925c-b4c711caa290",
-          "asPropertyConvention": true,
-          "asPropertyVersion": true,
-          "asPropertyVersionPayload": "{\n  \"value\": \"DESIRED_VALUE\",\n  \"ac\": 200,\n  \"ad\": \"completed\",\n  \"av\": \"DESIRED_VERSION\"\n}"
-        },
-        {
-          "_id": "8d199b13-0ad5-461e-8b4e-017cecb9d660",
-          "_type": "property",
-          "name": "enum",
+          "name": "state",
           "component": {
             "enabled": true,
             "name": "cextended"
@@ -911,7 +231,7 @@
           "color": "#3e2e12",
           "enabled": true,
           "string": true,
-          "value": "AUTO_ENUM/[\"a\",\"b\",\"c\"]",
+          "value": "AUTO_ENUM/[\"moving\",\"stopped\"]",
           "sdk": "msg",
           "propertyObject": {
             "type": "default"
@@ -926,13 +246,261 @@
             "unit": "secs",
             "value": 30,
             "valueMax": 90,
-            "_ms": 31000
+            "onStartUp": true
+          }
+        }
+      ],
+      "configuration": {
+        "_kind": "template",
+        "deviceId": "7db98259-e337-4ab8-84d1-4d63de4d40f8",
+        "mockDeviceName": "mock-device",
+        "mockDeviceCloneId": "",
+        "connectionString": "",
+        "scopeId": "",
+        "dpsPayload": "",
+        "sasKey": "",
+        "isMasterKey": false,
+        "capabilityUrn": "dtmi:codetunez:root;1",
+        "plugIn": ""
+      },
+      "_id": "7db98259-e337-4ab8-84d1-4d63de4d40f8",
+      "plan": {
+        "startup": [],
+        "timeline": [],
+        "receive": [],
+        "random": []
+      }
+    },
+    {
+      "comms": [
+        {
+          "_id": "d46ce4b6-3087-42a8-af51-a41f84bab69a",
+          "_type": "property",
+          "name": "battery",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "AUTO_DOUBLE",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 73000
           }
         },
         {
-          "_id": "7ccbb2ef-3876-448e-a9ba-1dacbbcd13f0",
+          "_id": "c90225ce-395d-466e-9365-81d5a7e5a589",
           "_type": "property",
-          "name": "eventInfo",
+          "name": "velocity",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": true,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 48000
+          },
+          "mock": {
+            "_id": "d4fb8a7e-0b65-4c49-8682-c99eeb75548e",
+            "_hasState": false,
+            "_type": "fan",
+            "_value": "357.142857142857142",
+            "init": "10",
+            "variance": 2.5,
+            "running": "35",
+            "timeToRunning": "10",
+            "_resx": {
+              "init": "Initial",
+              "running": "Expected",
+              "variance": "Varies %",
+              "timeToRunning": "Starts"
+            }
+          }
+        },
+        {
+          "_id": "5c30435e-daaf-4bbd-a909-ed396e7e7a0d",
+          "_type": "property",
+          "name": "harvestingDrumRpm",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "AUTO_DOUBLE",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 42000
+          }
+        },
+        {
+          "_id": "a2f443cb-72e4-4f69-bdd6-47e3382b4bec",
+          "_type": "property",
+          "name": "harvestedArea",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": true,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 68000
+          },
+          "mock": {
+            "_id": "0a3af826-6667-44b4-af56-ffbff606b25b",
+            "_hasState": false,
+            "_type": "inc",
+            "_value": 734,
+            "variance": 1,
+            "init": 0,
+            "reset": null,
+            "_resx": {
+              "init": "Initial",
+              "variance": "Step",
+              "reset": "Reset"
+            }
+          }
+        },
+        {
+          "_id": "5c9144c6-6581-4089-ab4f-ef1d631f205d",
+          "_type": "property",
+          "name": "grainTankVolume",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": true,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 86000
+          },
+          "mock": {
+            "_id": "e1965c99-3a66-460c-8ec5-451c6b5b0215",
+            "_hasState": false,
+            "_type": "dec",
+            "_value": 9994200,
+            "variance": "10",
+            "init": "10000000",
+            "reset": null,
+            "_resx": {
+              "init": "Initial",
+              "variance": "Step",
+              "reset": "Reset"
+            }
+          }
+        },
+        {
+          "_id": "604123ab-bea2-4aec-97c2-165e6fe8a28e",
+          "_type": "property",
+          "name": "location",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "AUTO_GEOPOINT",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": "30",
+            "valueMax": 60,
+            "onStartUp": true,
+            "_ms": 38000
+          }
+        },
+        {
+          "_id": "a38bb338-8875-4641-aeba-2aaa1bff4c35",
+          "_type": "property",
+          "name": "state",
           "component": {
             "enabled": true,
             "name": "cextended"
@@ -940,7 +508,7 @@
           "color": "#3e2e12",
           "enabled": true,
           "string": true,
-          "value": "AUTO_STRING",
+          "value": "AUTO_ENUM/[\"moving\",\"stopped\"]",
           "sdk": "msg",
           "propertyObject": {
             "type": "default"
@@ -955,132 +523,17 @@
             "unit": "secs",
             "value": 30,
             "valueMax": 90,
-            "_ms": 75000
-          }
-        },
-        {
-          "_id": "96e12a5a-2308-4173-b143-3073d3f3cdaa",
-          "_type": "property",
-          "name": "hashMap",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#333",
-          "enabled": true,
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "_ms": 0,
-            "include": false,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          },
-          "_matchedId": "5a0c688c-e0a1-4e85-b28b-0399619d7d9f"
-        },
-        {
-          "_id": "bf99b97d-7faf-431e-af63-6419edbc18e0",
-          "_type": "property",
-          "enabled": true,
-          "name": "hashMap",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#383a1e",
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "c2d"
-          },
-          "_matchedId": "2cf4cf2b-e1de-4279-a396-64b8110134d7",
-          "asProperty": true,
-          "asPropertyId": "96e12a5a-2308-4173-b143-3073d3f3cdaa",
-          "asPropertyConvention": true,
-          "asPropertyVersion": true,
-          "asPropertyVersionPayload": "{\n  \"value\": \"DESIRED_VALUE\",\n  \"ac\": 200,\n  \"ad\": \"completed\",\n  \"av\": \"DESIRED_VERSION\"\n}"
-        },
-        {
-          "_id": "bbdef67d-e2a4-401c-a0a5-511086a02b0e",
-          "_type": "property",
-          "name": "boolean",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#3e2e12",
-          "enabled": true,
-          "string": false,
-          "value": "AUTO_BOOLEAN",
-          "sdk": "msg",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90,
-            "_ms": 77000
-          }
-        },
-        {
-          "_id": "91c27885-b5cd-4e7d-8189-11d25a58d44f",
-          "_type": "property",
-          "name": "heartbeat",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#3e2e12",
-          "enabled": true,
-          "string": true,
-          "value": "AUTO_DATETIME",
-          "sdk": "msg",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90,
-            "_ms": 66000
+            "onStartUp": true,
+            "_ms": 84000
           }
         }
       ],
       "configuration": {
         "_kind": "hub",
-        "deviceId": null,
-        "mockDeviceName": "mockdev1",
-        "mockDeviceCloneId": "3fc17758-580c-4a9f-a69f-3faab0e7b565",
-        "connectionString": "xxx",
+        "deviceId": "tractor002",
+        "mockDeviceName": "tractor002",
+        "mockDeviceCloneId": "7db98259-e337-4ab8-84d1-4d63de4d40f8",
+        "connectionString": "<device-connection-string>",
         "scopeId": "",
         "dpsPayload": "",
         "sasKey": "",
@@ -1089,21 +542,20 @@
         "capabilityUrn": "dtmi:codetunez:root;1",
         "plugIn": ""
       },
-      "_id": null,
+      "_id": "tractor002",
       "plan": {
-        "loop": false,
         "startup": [],
         "timeline": [],
-        "random": [],
-        "receive": []
+        "receive": [],
+        "random": []
       }
     },
     {
       "comms": [
         {
-          "_id": "667218e2-18eb-404a-9004-e65e0251c442",
+          "_id": "655373aa-3abf-4d50-9e0d-1aecc180f253",
           "_type": "property",
-          "name": "random",
+          "name": "battery",
           "component": {
             "enabled": false,
             "name": "Component"
@@ -1126,13 +578,14 @@
             "unit": "secs",
             "value": 30,
             "valueMax": 90,
-            "_ms": 62000
+            "onStartUp": true,
+            "_ms": 44000
           }
         },
         {
-          "_id": "9367a75c-7ef7-49c4-9625-e7ce80c3e0c4",
+          "_id": "ea7921b3-718d-42c5-a281-44c1eb15d0ff",
           "_type": "property",
-          "name": "inc",
+          "name": "velocity",
           "component": {
             "enabled": false,
             "name": "Component"
@@ -1140,14 +593,14 @@
           "color": "#3e2e12",
           "enabled": true,
           "string": false,
-          "value": 1000,
+          "value": "",
           "sdk": "msg",
           "propertyObject": {
             "type": "default"
           },
           "version": 0,
           "type": {
-            "mock": false,
+            "mock": true,
             "direction": "d2c"
           },
           "runloop": {
@@ -1155,13 +608,30 @@
             "unit": "secs",
             "value": 30,
             "valueMax": 90,
-            "_ms": 65000
+            "onStartUp": true,
+            "_ms": 64000
+          },
+          "mock": {
+            "_id": "7d206f01-ada5-4255-8df8-4c39e3e7cad7",
+            "_hasState": false,
+            "_type": "fan",
+            "_value": 27.857142857142858,
+            "init": "10",
+            "variance": 2.5,
+            "running": "35",
+            "timeToRunning": "10",
+            "_resx": {
+              "init": "Initial",
+              "running": "Expected",
+              "variance": "Varies %",
+              "timeToRunning": "Starts"
+            }
           }
         },
         {
-          "_id": "b21c5cca-44cc-4568-b770-ac8e552ee1b2",
+          "_id": "11b066f2-59a9-4a0a-8cdc-bfcf6a301746",
           "_type": "property",
-          "name": "dec",
+          "name": "harvestingDrumRpm",
           "component": {
             "enabled": false,
             "name": "Component"
@@ -1184,99 +654,111 @@
             "unit": "secs",
             "value": 30,
             "valueMax": 90,
-            "_ms": 47000
+            "onStartUp": true,
+            "_ms": 59000
           }
         },
         {
-          "_id": "955fdb3f-63ac-4112-9e71-4f2c51afacba",
-          "_type": "method",
-          "execution": "direct",
-          "enabled": true,
-          "name": "reboot",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#3a1e1e",
-          "status": "200",
-          "receivedParams": null,
-          "asProperty": false,
-          "payload": "{\n  \"result\": \"OK\"\n}"
-        },
-        {
-          "_id": "1b66bee0-9a85-44ec-b28b-4e65c98e4643",
-          "_type": "method",
-          "execution": "direct",
-          "enabled": true,
-          "name": "firmware",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#3a1e1e",
-          "status": "200",
-          "receivedParams": null,
-          "asProperty": false,
-          "payload": "{\n  \"result\": \"OK\"\n}"
-        },
-        {
-          "_id": "182ea763-aba8-4e0e-a30c-73d0bba781bc",
-          "_type": "method",
-          "execution": "direct",
-          "enabled": true,
-          "name": "shutdown",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#3a1e1e",
-          "status": "200",
-          "receivedParams": null,
-          "asProperty": false,
-          "payload": "{\n  \"result\": \"OK\"\n}"
-        },
-        {
-          "_id": "ad764659-8810-429a-aafc-d1d9b183b40e",
+          "_id": "052bc7c3-412d-4698-8dba-920a7e2f5d6f",
           "_type": "property",
-          "name": "info",
+          "name": "harvestedArea",
           "component": {
             "enabled": false,
             "name": "Component"
           },
-          "color": "#333",
+          "color": "#3e2e12",
           "enabled": true,
-          "string": true,
-          "value": "AUTO_STRING",
-          "sdk": "twin",
+          "string": false,
+          "value": "",
+          "sdk": "msg",
           "propertyObject": {
             "type": "default"
           },
           "version": 0,
           "type": {
-            "mock": false,
+            "mock": true,
             "direction": "d2c"
           },
           "runloop": {
             "include": true,
-            "unit": "mins",
-            "value": 5,
-            "valueMax": 60,
-            "_ms": 420000
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 44000
+          },
+          "mock": {
+            "_id": "6350cff5-1124-4d96-ba39-2014ca1819d5",
+            "_hasState": false,
+            "_type": "inc",
+            "_value": 1138,
+            "variance": 1,
+            "init": 0,
+            "reset": null,
+            "_resx": {
+              "init": "Initial",
+              "variance": "Step",
+              "reset": "Reset"
+            }
           }
         },
         {
-          "_id": "43fc7687-b493-4f31-a9b2-f800aa074096",
+          "_id": "51510e8d-0119-4f64-bd7c-51a9441d4b7e",
+          "_type": "property",
+          "name": "grainTankVolume",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": true,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 44000
+          },
+          "mock": {
+            "_id": "745da7e8-6dc3-4ced-a7be-4ba377af2531",
+            "_hasState": false,
+            "_type": "dec",
+            "_value": 9988620,
+            "variance": "10",
+            "init": "10000000",
+            "reset": null,
+            "_resx": {
+              "init": "Initial",
+              "variance": "Step",
+              "reset": "Reset"
+            }
+          }
+        },
+        {
+          "_id": "fe96ef6b-26a6-459f-9640-c94325f5ed69",
           "_type": "property",
           "name": "location",
           "component": {
             "enabled": false,
             "name": "Component"
           },
-          "color": "#333",
+          "color": "#3e2e12",
           "enabled": true,
           "string": false,
           "value": "AUTO_GEOPOINT",
-          "sdk": "twin",
+          "sdk": "msg",
           "propertyObject": {
             "type": "default"
           },
@@ -1287,134 +769,17 @@
           },
           "runloop": {
             "include": true,
-            "unit": "mins",
-            "value": 5,
-            "valueMax": 60,
-            "_ms": 780000
+            "unit": "secs",
+            "value": "15",
+            "valueMax": "30",
+            "onStartUp": true,
+            "_ms": 57000
           }
         },
         {
-          "_id": "36102450-43bb-470b-a6b7-77e77c2de1dc",
+          "_id": "fc8f9f7d-dd8b-41fc-a984-b28d62327afa",
           "_type": "property",
-          "name": "setting",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#333",
-          "enabled": true,
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "_ms": 0,
-            "include": false,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          },
-          "_matchedId": "3531098d-ab9b-4b81-9594-058a4c9a7e93"
-        },
-        {
-          "_id": "778dca86-8107-4e70-857a-d591de5a8e23",
-          "_type": "property",
-          "enabled": true,
-          "name": "setting",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#383a1e",
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "c2d"
-          },
-          "_matchedId": "b6ca06c3-df8a-4d53-b0f3-4597293692d2",
-          "asProperty": true,
-          "asPropertyId": "36102450-43bb-470b-a6b7-77e77c2de1dc",
-          "asPropertyConvention": true,
-          "asPropertyVersion": true,
-          "asPropertyVersionPayload": "{\n  \"value\": \"DESIRED_VALUE\",\n  \"ac\": 200,\n  \"ad\": \"completed\",\n  \"av\": \"DESIRED_VERSION\"\n}"
-        },
-        {
-          "_id": "9929ff9b-f5f5-4929-b02b-2f6a2e0eedfa",
-          "_type": "property",
-          "name": "complex",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#333",
-          "enabled": true,
-          "string": false,
-          "value": 0,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "templated",
-            "template": "{\n  \"compDbl\": \"AUTO_DOUBLE\",\n  \"compStr\": \"AUTO_STRING\",\n  \"compBln\": \"AUTO_BOOLEAN\"\n}"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "_ms": 0,
-            "include": false,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          },
-          "_matchedId": "2883deba-a1fe-4c4a-ae4d-d7a9c90d37c6"
-        },
-        {
-          "_id": "c66940b7-60dd-44f3-ad1f-f1fda8ef7338",
-          "_type": "property",
-          "enabled": true,
-          "name": "complex",
-          "component": {
-            "enabled": false,
-            "name": "Component"
-          },
-          "color": "#383a1e",
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "templated",
-            "template": "{\n  \"compDbl\": \"AUTO_DOUBLE\",\n  \"compStr\": \"AUTO_STRING\",\n  \"compBln\": \"AUTO_BOOLEAN\"\n}"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "c2d"
-          },
-          "_matchedId": "164fa0ce-13a9-48cf-a6c0-e4ad4f4b3b87",
-          "asProperty": true,
-          "asPropertyId": "9929ff9b-f5f5-4929-b02b-2f6a2e0eedfa",
-          "asPropertyConvention": true,
-          "asPropertyVersion": true,
-          "asPropertyVersionPayload": "{\n  \"value\": \"DESIRED_VALUE\",\n  \"ac\": 200,\n  \"ad\": \"completed\",\n  \"av\": \"DESIRED_VERSION\"\n}"
-        },
-        {
-          "_id": "dc2e989d-2aa1-4dd0-823e-231bd43b0af4",
-          "_type": "property",
-          "name": "enum",
+          "name": "state",
           "component": {
             "enabled": true,
             "name": "cextended"
@@ -1422,7 +787,7 @@
           "color": "#3e2e12",
           "enabled": true,
           "string": true,
-          "value": "AUTO_ENUM/[\"a\",\"b\",\"c\"]",
+          "value": "AUTO_ENUM/[\"moving\",\"stopped\"]",
           "sdk": "msg",
           "propertyObject": {
             "type": "default"
@@ -1437,170 +802,863 @@
             "unit": "secs",
             "value": 30,
             "valueMax": 90,
-            "_ms": 48000
-          }
-        },
-        {
-          "_id": "a9c9d96a-ab0d-42e9-879e-5f2cacce8fbb",
-          "_type": "property",
-          "name": "eventInfo",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#3e2e12",
-          "enabled": true,
-          "string": true,
-          "value": "AUTO_STRING",
-          "sdk": "msg",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90,
-            "_ms": 54000
-          }
-        },
-        {
-          "_id": "ddb3351f-7877-4c19-afdc-cc5b9bc78362",
-          "_type": "property",
-          "name": "hashMap",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#333",
-          "enabled": true,
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "_ms": 0,
-            "include": false,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90
-          },
-          "_matchedId": "5a0c688c-e0a1-4e85-b28b-0399619d7d9f"
-        },
-        {
-          "_id": "0470c5e4-7ef6-4406-bc31-67c3ee8a31e9",
-          "_type": "property",
-          "enabled": true,
-          "name": "hashMap",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#383a1e",
-          "string": false,
-          "value": null,
-          "sdk": "twin",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "c2d"
-          },
-          "_matchedId": "2cf4cf2b-e1de-4279-a396-64b8110134d7",
-          "asProperty": true,
-          "asPropertyId": "ddb3351f-7877-4c19-afdc-cc5b9bc78362",
-          "asPropertyConvention": true,
-          "asPropertyVersion": true,
-          "asPropertyVersionPayload": "{\n  \"value\": \"DESIRED_VALUE\",\n  \"ac\": 200,\n  \"ad\": \"completed\",\n  \"av\": \"DESIRED_VERSION\"\n}"
-        },
-        {
-          "_id": "88c023ab-63a6-4ce0-9ca4-d06f0567d153",
-          "_type": "property",
-          "name": "boolean",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#3e2e12",
-          "enabled": true,
-          "string": false,
-          "value": "AUTO_BOOLEAN",
-          "sdk": "msg",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90,
-            "_ms": 37000
-          }
-        },
-        {
-          "_id": "ea094b29-2146-4641-a0de-5f030bae6331",
-          "_type": "property",
-          "name": "heartbeat",
-          "component": {
-            "enabled": true,
-            "name": "cextended"
-          },
-          "color": "#3e2e12",
-          "enabled": true,
-          "string": true,
-          "value": "AUTO_DATETIME",
-          "sdk": "msg",
-          "propertyObject": {
-            "type": "default"
-          },
-          "version": 0,
-          "type": {
-            "mock": false,
-            "direction": "d2c"
-          },
-          "runloop": {
-            "include": true,
-            "unit": "secs",
-            "value": 30,
-            "valueMax": 90,
-            "_ms": 52000
+            "onStartUp": true,
+            "_ms": 40000
           }
         }
       ],
       "configuration": {
-        "_kind": "dps",
-        "deviceId": "xxx",
-        "mockDeviceName": "xxx",
-        "mockDeviceCloneId": "3fc17758-580c-4a9f-a69f-3faab0e7b565",
-        "connectionString": "",
-        "scopeId": "xxx",
+        "_kind": "hub",
+        "deviceId": "tractor001",
+        "mockDeviceName": "tractor001",
+        "mockDeviceCloneId": "7db98259-e337-4ab8-84d1-4d63de4d40f8",
+        "connectionString": "<device-connection-string>",
+        "scopeId": "",
         "dpsPayload": "",
-        "sasKey": "xxx",
+        "sasKey": "",
         "isMasterKey": false,
         "capabilityModel": "",
         "capabilityUrn": "dtmi:codetunez:root;1",
         "plugIn": ""
       },
-      "_id": "xxx",
+      "_id": "tractor001",
+      "plan": {
+        "startup": [],
+        "timeline": [],
+        "receive": [],
+        "random": []
+      }
+    },
+    {
+      "comms": [
+        {
+          "_id": "44b7d9c9-4e81-4d18-ba2c-b722a4b5a708",
+          "_type": "property",
+          "name": "battery",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "AUTO_DOUBLE",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 67000
+          }
+        },
+        {
+          "_id": "f78959e5-bc32-4b66-99d6-7539bba6d49d",
+          "_type": "property",
+          "name": "velocity",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": true,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 41000
+          },
+          "mock": {
+            "_id": "34886569-950b-4b0b-9ab1-64eb7cccdbc0",
+            "_hasState": false,
+            "_type": "fan",
+            "_value": "357.142857142857142",
+            "init": "10",
+            "variance": 2.5,
+            "running": "35",
+            "timeToRunning": "10",
+            "_resx": {
+              "init": "Initial",
+              "running": "Expected",
+              "variance": "Varies %",
+              "timeToRunning": "Starts"
+            }
+          }
+        },
+        {
+          "_id": "d2264897-f091-44ab-b2de-9923c6d68a23",
+          "_type": "property",
+          "name": "harvestingDrumRpm",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "AUTO_DOUBLE",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 45000
+          }
+        },
+        {
+          "_id": "971feb6c-6cfe-47b0-b53d-eaeb50ba350e",
+          "_type": "property",
+          "name": "harvestedArea",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": true,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 71000
+          },
+          "mock": {
+            "_id": "9c261149-2903-4b32-9eb3-9864da9c0f16",
+            "_hasState": false,
+            "_type": "inc",
+            "_value": 702,
+            "variance": 1,
+            "init": 0,
+            "reset": null,
+            "_resx": {
+              "init": "Initial",
+              "variance": "Step",
+              "reset": "Reset"
+            }
+          }
+        },
+        {
+          "_id": "a7726e3b-279b-4f4b-8567-5e9eaaafbf9a",
+          "_type": "property",
+          "name": "grainTankVolume",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": true,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 61000
+          },
+          "mock": {
+            "_id": "71ed2611-6c7f-42fb-a286-98a78916c800",
+            "_hasState": false,
+            "_type": "dec",
+            "_value": 9991830,
+            "variance": "10",
+            "init": "10000000",
+            "reset": null,
+            "_resx": {
+              "init": "Initial",
+              "variance": "Step",
+              "reset": "Reset"
+            }
+          }
+        },
+        {
+          "_id": "3f6af2aa-2126-4a58-b751-453992811949",
+          "_type": "property",
+          "name": "location",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "AUTO_GEOPOINT",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": "30",
+            "valueMax": 60,
+            "onStartUp": true,
+            "_ms": 38000
+          }
+        },
+        {
+          "_id": "c43e25bb-f371-49bc-8e55-591b495f7eaf",
+          "_type": "property",
+          "name": "state",
+          "component": {
+            "enabled": true,
+            "name": "cextended"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": true,
+          "value": "AUTO_ENUM/[\"moving\",\"stopped\"]",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 76000
+          }
+        }
+      ],
+      "configuration": {
+        "_kind": "hub",
+        "deviceId": "tractor003",
+        "mockDeviceName": "tractor003",
+        "mockDeviceCloneId": "7db98259-e337-4ab8-84d1-4d63de4d40f8",
+        "connectionString": "<device-connection-string>",
+        "scopeId": "",
+        "dpsPayload": "",
+        "sasKey": "",
+        "isMasterKey": false,
+        "capabilityModel": "",
+        "capabilityUrn": "dtmi:codetunez:root;1",
+        "plugIn": ""
+      },
+      "_id": "tractor003",
+      "plan": {
+        "startup": [],
+        "timeline": [],
+        "receive": [],
+        "random": []
+      }
+    },
+    {
+      "comms": [
+        {
+          "_id": "69bbc3d4-fd0f-44f2-ac6a-2eddd890d715",
+          "_type": "property",
+          "name": "battery",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "AUTO_DOUBLE",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 77000
+          }
+        },
+        {
+          "_id": "f2db5302-c319-4920-8a22-05482109767d",
+          "_type": "property",
+          "name": "velocity",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": true,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 48000
+          },
+          "mock": {
+            "_id": "5063cb96-ef65-4a02-bfc3-247f514d196b",
+            "_hasState": false,
+            "_type": "fan",
+            "_value": 27.857142857142858,
+            "init": "10",
+            "variance": 2.5,
+            "running": "35",
+            "timeToRunning": "10",
+            "_resx": {
+              "init": "Initial",
+              "running": "Expected",
+              "variance": "Varies %",
+              "timeToRunning": "Starts"
+            }
+          }
+        },
+        {
+          "_id": "98e1f30a-fcd6-43d9-b1e2-0f72dc1c9d59",
+          "_type": "property",
+          "name": "harvestingDrumRpm",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "AUTO_DOUBLE",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 40000
+          }
+        },
+        {
+          "_id": "81b61044-d4c8-41c2-811f-82c46788c081",
+          "_type": "property",
+          "name": "harvestedArea",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": true,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 38000
+          },
+          "mock": {
+            "_id": "27628e4c-c1b2-454e-824a-ea51a131e217",
+            "_hasState": false,
+            "_type": "inc",
+            "_value": 1311,
+            "variance": 1,
+            "init": 0,
+            "reset": null,
+            "_resx": {
+              "init": "Initial",
+              "variance": "Step",
+              "reset": "Reset"
+            }
+          }
+        },
+        {
+          "_id": "b69ab1e1-9d71-4e0b-b6da-b81348bfb114",
+          "_type": "property",
+          "name": "grainTankVolume",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": true,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 32000
+          },
+          "mock": {
+            "_id": "bf59055e-2286-4e56-a5b9-7a3b22de09ab",
+            "_hasState": false,
+            "_type": "dec",
+            "_value": 9984440,
+            "variance": "10",
+            "init": "10000000",
+            "reset": null,
+            "_resx": {
+              "init": "Initial",
+              "variance": "Step",
+              "reset": "Reset"
+            }
+          }
+        },
+        {
+          "_id": "650ac524-582c-4dfb-b82b-67c9e52948ac",
+          "_type": "property",
+          "name": "location",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "AUTO_GEOPOINT",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": "30",
+            "valueMax": 60,
+            "onStartUp": true,
+            "_ms": 55000
+          }
+        },
+        {
+          "_id": "1a21586a-81b1-455c-831d-b05fa932d499",
+          "_type": "property",
+          "name": "state",
+          "component": {
+            "enabled": true,
+            "name": "cextended"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": true,
+          "value": "AUTO_ENUM/[\"moving\",\"stopped\"]",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 36000
+          }
+        }
+      ],
+      "configuration": {
+        "_kind": "hub",
+        "deviceId": "tractor004",
+        "mockDeviceName": "tractor004",
+        "mockDeviceCloneId": "7db98259-e337-4ab8-84d1-4d63de4d40f8",
+        "connectionString": "<device-connection-string>",
+        "scopeId": "",
+        "dpsPayload": "",
+        "sasKey": "",
+        "isMasterKey": false,
+        "capabilityModel": "",
+        "capabilityUrn": "dtmi:codetunez:root;1",
+        "plugIn": ""
+      },
+      "_id": "tractor004",
+      "plan": {
+        "startup": [],
+        "timeline": [],
+        "receive": [],
+        "random": []
+      }
+    },
+    {
+      "comms": [
+        {
+          "_id": "8b314440-7f9a-488f-a66e-073132628c2b",
+          "_type": "property",
+          "name": "battery",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "AUTO_DOUBLE",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 58000
+          }
+        },
+        {
+          "_id": "998a7339-0127-4707-b622-8fcc9221e97d",
+          "_type": "property",
+          "name": "velocity",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": true,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 78000
+          },
+          "mock": {
+            "_id": "7a234da6-d20a-4070-97b0-190a32be8198",
+            "_hasState": false,
+            "_type": "fan",
+            "_value": "357.142857142857142",
+            "init": "10",
+            "variance": 2.5,
+            "running": "35",
+            "timeToRunning": "10",
+            "_resx": {
+              "init": "Initial",
+              "running": "Expected",
+              "variance": "Varies %",
+              "timeToRunning": "Starts"
+            }
+          }
+        },
+        {
+          "_id": "1a5c891a-b296-4ad4-bb8c-224672828d29",
+          "_type": "property",
+          "name": "harvestingDrumRpm",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "AUTO_DOUBLE",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 77000
+          }
+        },
+        {
+          "_id": "d0756b7b-4869-478c-bb19-59b69b487961",
+          "_type": "property",
+          "name": "harvestedArea",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": true,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 49000
+          },
+          "mock": {
+            "_id": "24446685-7d15-49b7-84ef-40c009ed8be0",
+            "_hasState": false,
+            "_type": "inc",
+            "_value": 1016,
+            "variance": 1,
+            "init": 0,
+            "reset": null,
+            "_resx": {
+              "init": "Initial",
+              "variance": "Step",
+              "reset": "Reset"
+            }
+          }
+        },
+        {
+          "_id": "318b589d-e1bb-4717-aa07-79309c5855b2",
+          "_type": "property",
+          "name": "grainTankVolume",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": true,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 48000
+          },
+          "mock": {
+            "_id": "76502876-11da-4a0c-b884-281443588bb8",
+            "_hasState": false,
+            "_type": "dec",
+            "_value": 9989620,
+            "variance": "10",
+            "init": "10000000",
+            "reset": null,
+            "_resx": {
+              "init": "Initial",
+              "variance": "Step",
+              "reset": "Reset"
+            }
+          }
+        },
+        {
+          "_id": "045a7438-e4a0-4a97-bcf0-cdb409f6d764",
+          "_type": "property",
+          "name": "location",
+          "component": {
+            "enabled": false,
+            "name": "Component"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": false,
+          "value": "AUTO_GEOPOINT",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": "30",
+            "valueMax": 60,
+            "onStartUp": true,
+            "_ms": 38000
+          }
+        },
+        {
+          "_id": "cfd40202-f8b8-45cf-8a8f-d18c46e6c210",
+          "_type": "property",
+          "name": "state",
+          "component": {
+            "enabled": true,
+            "name": "cextended"
+          },
+          "color": "#3e2e12",
+          "enabled": true,
+          "string": true,
+          "value": "AUTO_ENUM/[\"moving\",\"stopped\"]",
+          "sdk": "msg",
+          "propertyObject": {
+            "type": "default"
+          },
+          "version": 0,
+          "type": {
+            "mock": false,
+            "direction": "d2c"
+          },
+          "runloop": {
+            "include": true,
+            "unit": "secs",
+            "value": 30,
+            "valueMax": 90,
+            "onStartUp": true,
+            "_ms": 35000
+          }
+        }
+      ],
+      "configuration": {
+        "_kind": "hub",
+        "deviceId": "tractor005",
+        "mockDeviceName": "tractor005",
+        "mockDeviceCloneId": "7db98259-e337-4ab8-84d1-4d63de4d40f8",
+        "connectionString": "<device-connection-string>",
+        "scopeId": "",
+        "dpsPayload": "",
+        "sasKey": "",
+        "isMasterKey": false,
+        "capabilityModel": "",
+        "capabilityUrn": "dtmi:codetunez:root;1",
+        "plugIn": ""
+      },
+      "_id": "tractor005",
       "plan": {
         "startup": [],
         "timeline": [],
@@ -1623,20 +1681,20 @@
     },
     "ranges": {
       "AUTO_INTEGER": {
-        "min": 1,
-        "max": 5000
+        "min": 10,
+        "max": 50
       },
       "AUTO_DOUBLE": {
-        "min": 1,
-        "max": 5000
+        "min": 50,
+        "max": 100
       },
       "AUTO_LONG": {
-        "min": 1,
-        "max": 5000
+        "min": 200,
+        "max": 500
       },
       "AUTO_FLOAT": {
-        "min": 1,
-        "max": 5000
+        "min": -50,
+        "max": 50
       },
       "AUTO_VECTOR": {
         "min": 1,
