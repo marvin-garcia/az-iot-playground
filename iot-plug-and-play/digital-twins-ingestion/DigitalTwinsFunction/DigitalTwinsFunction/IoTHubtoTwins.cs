@@ -43,18 +43,46 @@ namespace DigitalTwinsFunction
                 {
                     JObject deviceMessage = (JObject)JsonConvert.DeserializeObject(eventGridEvent.Data.ToString());
                     string deviceId = (string)deviceMessage["systemProperties"]["iothub-connection-device-id"];
-                    string deviceBody = (string)deviceMessage["body"];
-                    JObject body = JsonConvert.DeserializeObject<JObject>(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(deviceBody)));
+                    DateTime enqueuedTime = (DateTime)deviceMessage["systemProperties"]["iothub-enqueuedtime"];
+                    if (enqueuedTime < DateTime.UtcNow.Subtract(new TimeSpan(0, 30, 0)))
+                    {
+                        log.LogWarning("Finishing execution because message is too old");
+                        return;
+                    }
+
+
+                    string deviceBody = JsonConvert.SerializeObject(deviceMessage["body"]);
+                    JObject body = default;
+                    try
+                    {
+                        body = JsonConvert.DeserializeObject<JObject>(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(deviceBody)));
+                    }
+                    catch
+                    {
+                        body = JsonConvert.DeserializeObject<JObject>(deviceBody);
+                    }
+                    //log.LogInformation($"device body: {JsonConvert.SerializeObject(body)}");
 
                     #region update device twin properties
                     // Comment if PnP uses telemetry
                     var updateTwinData = new JsonPatchDocument();
                     foreach (var property in body.Properties())
                     {
-                        log.LogInformation($"Device: {deviceId} | {property.Name}: {body.GetValue(property.Name)}");
-                        
-                        // Comment if PnP uses telemetry
-                        updateTwinData.AppendReplace($"/{property.Name}", body.GetValue(property.Name).Value<double>());
+                        log.LogInformation($"Device: {deviceId}, {property.Name}: {JsonConvert.SerializeObject(body.GetValue(property.Name).Value<object>())}");
+
+                        // handle location telemetry
+                        if (property.Name == "location")
+                        {
+                            JObject coordinatesObject = body.GetValue(property.Name).Value<JObject>();
+                            double lat = coordinatesObject.GetValue("lat").Value<double>();
+                            double lon = coordinatesObject.GetValue("lon").Value<double>();
+                            updateTwinData.AppendReplace($"/latitude", lat);
+                            updateTwinData.AppendReplace($"/longitude", lon);
+                        }
+                        else if (property.Name == "state")
+                            updateTwinData.AppendReplace($"/{property.Name}", body.GetValue(property.Name).Value<string>());
+                        else
+                            updateTwinData.AppendReplace($"/{property.Name}", body.GetValue(property.Name).Value<double>());
 
                         // Uncomment if PnP uses telemetry
                         //await client.PublishTelemetryAsync(deviceId, Guid.NewGuid().ToString(), $"{{ \"{property.Name}\": {body.GetValue(property.Name).Value<double>()} }}");
@@ -64,27 +92,30 @@ namespace DigitalTwinsFunction
                     await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
                     #endregion
 
-                    #region update properties for simulated devices (if any)
-                    foreach (var device in simDevices)
-                    {
-                        updateTwinData = new JsonPatchDocument();
-                        foreach (var property in body.Properties())
-                        {
-                            log.LogInformation($"Sim device: {device} | {property.Name}: {body.GetValue(property.Name)}");
+                    #region update properties for simulated devices (if any, when it is not tractor telemetry)
+                    //if (!deviceId.StartsWith("tractor"))
+                    //{
+                    //    foreach (var device in simDevices)
+                    //    {
+                    //        updateTwinData = new JsonPatchDocument();
+                    //        foreach (var property in body.Properties())
+                    //        {
+                    //            log.LogInformation($"Sim device: {device} | {property.Name}: {body.GetValue(property.Name)}");
 
-                            // Comment if PnP uses telemetry
-                            double r = random.Next(minSimThreshold, maxSimThreshold);
-                            double propertyValue = body.GetValue(property.Name).Value<double>() * r / 10;
-                            updateTwinData.AppendReplace($"/{property.Name}", propertyValue);
+                    //            // Comment if PnP uses telemetry
+                    //            double r = random.Next(minSimThreshold, maxSimThreshold);
+                    //            double propertyValue = body.GetValue(property.Name).Value<double>() * r / 10;
+                    //            updateTwinData.AppendReplace($"/{property.Name}", propertyValue);
 
-                            // Uncomment if PnP uses telemetry
-                            //await client.PublishTelemetryAsync(deviceId, Guid.NewGuid().ToString(), $"{{ \"{property.Name}\": {propertyValue} }}");
-                        }
+                    //            // Uncomment if PnP uses telemetry
+                    //            //await client.PublishTelemetryAsync(deviceId, Guid.NewGuid().ToString(), $"{{ \"{property.Name}\": {propertyValue} }}");
+                    //        }
 
-                        // Comment if PnP uses telemetry
-                        var response = await client.UpdateDigitalTwinAsync(device, updateTwinData);
-                        log.LogInformation($"Response: {response.Status}. {response.Content}");
-                    }
+                    //        // Comment if PnP uses telemetry
+                    //        var response = await client.UpdateDigitalTwinAsync(device, updateTwinData);
+                    //        log.LogInformation($"Response: {response.Status}. {response.Content}");
+                    //    }
+                    //}
                     #endregion
                 }
             }
