@@ -1,4 +1,4 @@
-$dtname = '<adt-instance-name>'
+$dtname = '<adt-instance>'
 
 az dt twin create -n $dtname --twin-id mxchip2001 --dtmi 'dtmi:azurertos:devkit:gsgmxchip;2' --properties '{\"deviceInformation\": {\"$metadata\": {},\"manufacturer\":\"MXCHIP\",\"model\":\"AZ3166\",\"osName\":\"Azure RTOS\",\"processorArchitecture\":\"Arm Cortex M4\",\"processorManufacturer\":\"STMicroelectronics\",\"swVersion\":\"1.0.0\",\"totalMemory\": 128,\"totalStorage\": 1024 },\"accelerometerX\": -24.76,\"accelerometerY\": 12.62,\"accelerometerZ\": 1041.27,\"gyroscopeX\": 0,\"gyroscopeY\": 0,\"gyroscopeZ\": 0,\"humidity\": 39.22,\"magnetometerX\": -21,\"magnetometerY\": -24,\"magnetometerZ\": -303,\"pressure\": 1027.87,\"telemetryInterval\": 0,\"temperature\": 26.72 }'
 az dt twin create -n $dtname --twin-id mxchip3001 --dtmi 'dtmi:azurertos:devkit:gsgmxchip;2' --properties '{\"deviceInformation\": {\"$metadata\": {},\"manufacturer\":\"MXCHIP\",\"model\":\"AZ3166\",\"osName\":\"Azure RTOS\",\"processorArchitecture\":\"Arm Cortex M4\",\"processorManufacturer\":\"STMicroelectronics\",\"swVersion\":\"1.0.0\",\"totalMemory\": 128,\"totalStorage\": 1024 },\"accelerometerX\": -24.76,\"accelerometerY\": 12.62,\"accelerometerZ\": 1041.27,\"gyroscopeX\": 0,\"gyroscopeY\": 0,\"gyroscopeZ\": 0,\"humidity\": 39.22,\"magnetometerX\": -21,\"magnetometerY\": -24,\"magnetometerZ\": -303,\"pressure\": 1027.87,\"telemetryInterval\": 0,\"temperature\": 26.72 }'
@@ -19,8 +19,8 @@ az dt twin create -n $dtname --twin-id fleet001 --dtmi 'dtmi:digital_transportat
 az dt twin create -n $dtname --twin-id fleet002 --dtmi 'dtmi:digital_transportation:fleet;1' --properties '{\"FleetId\": \"234567\", \"FleetName\": \"fleet002\"}'
 az dt twin create -n $dtname --twin-id fleet003 --dtmi 'dtmi:digital_transportation:fleet;1' --properties '{\"FleetId\": \"345678\", \"FleetName\": \"fleet003\"}'
 
-az dt twin create -n $dtname --twin-id customer001 --dtmi 'dtmi:digital_transportation:customer;1' --properties '{\"Country\": \"US\", \"CustomerId\": \"customer001\", \"CustomerName\": \"Walmart\"}'
-az dt twin create -n $dtname --twin-id customer002 --dtmi 'dtmi:digital_transportation:customer;1' --properties '{\"Country\": \"CA\", \"CustomerId\": \"customer002\", \"CustomerName\": \"Tim Hortons\"}'
+az dt twin create -n $dtname --twin-id customer003 --dtmi 'dtmi:digital_transportation:customer;1' --properties '{\"Country\": \"US\", \"CustomerId\": \"customer003\", \"CustomerName\": \"Walmart\"}'
+az dt twin create -n $dtname --twin-id customer004 --dtmi 'dtmi:digital_transportation:customer;1' --properties '{\"Country\": \"CA\", \"CustomerId\": \"customer004\", \"CustomerName\": \"Tim Hortons\"}'
 
 az dt twin relationship create -n $dtname --relationship 'rel_has_sensors' --twin-id 'truck001' --target 'mxchipaz3166' --relationship-id 'truck001_mxchipaz3166'
 az dt twin relationship create -n $dtname --relationship 'rel_has_sensors' --twin-id 'truck002' --target 'mxchip2001' --relationship-id 'truck001_mxchip2001'
@@ -33,11 +33,11 @@ az dt twin relationship create -n $dtname --relationship 'rel_has_sensors' --twi
 az dt twin relationship create -n $dtname --relationship 'rel_has_trucks' --twin-id 'fleet001' --target 'truck001' --relationship-id 'fleet001_truck001'
 az dt twin relationship create -n $dtname --relationship 'rel_has_trucks' --twin-id 'fleet001' --target 'truck002' --relationship-id 'fleet001_truck002'
 az dt twin relationship create -n $dtname --relationship 'rel_has_trucks' --twin-id 'fleet001' --target 'truck003' --relationship-id 'fleet001_truck003'
-az dt twin relationship create -n $dtname --relationship 'rel_has_trucks' --twin-id 'fleet002' --target 'truck004' --relationship-id 'fleet001_truck004'
-az dt twin relationship create -n $dtname --relationship 'rel_has_trucks' --twin-id 'fleet002' --target 'truck005' --relationship-id 'fleet001_truck005'
-az dt twin relationship create -n $dtname --relationship 'rel_has_trucks' --twin-id 'fleet002' --target 'truck006' --relationship-id 'fleet001_truck006'
-az dt twin relationship create -n $dtname --relationship 'rel_has_trucks' --twin-id 'fleet003' --target 'truck007' --relationship-id 'fleet001_truck007'
+az dt twin relationship create -n $dtname --relationship 'rel_has_trucks' --twin-id 'fleet002' --target 'truck004' --relationship-id 'fleet002_truck004'
+az dt twin relationship create -n $dtname --relationship 'rel_has_trucks' --twin-id 'fleet002' --target 'truck005' --relationship-id 'fleet002_truck005'
+az dt twin relationship create -n $dtname --relationship 'rel_has_trucks' --twin-id 'fleet003' --target 'truck006' --relationship-id 'fleet003_truck006'
+az dt twin relationship create -n $dtname --relationship 'rel_has_trucks' --twin-id 'fleet003' --target 'truck007' --relationship-id 'fleet003_truck007'
 
-az dt twin relationship create -n $dtname --relationship 'rel_has_fleets' --twin-id 'customer001' --target 'fleet001' --relationship-id 'customer001_fleet001'
-az dt twin relationship create -n $dtname --relationship 'rel_has_fleets' --twin-id 'customer001' --target 'fleet002' --relationship-id 'customer001_fleet002'
-az dt twin relationship create -n $dtname --relationship 'rel_has_fleets' --twin-id 'customer002' --target 'fleet003' --relationship-id 'customer001_fleet003'
+az dt twin relationship create -n $dtname --relationship 'rel_has_fleets' --twin-id 'customer003' --target 'fleet001' --relationship-id 'customer003_fleet001'
+az dt twin relationship create -n $dtname --relationship 'rel_has_fleets' --twin-id 'customer004' --target 'fleet002' --relationship-id 'customer004_fleet002'
+az dt twin relationship create -n $dtname --relationship 'rel_has_fleets' --twin-id 'customer004' --target 'fleet003' --relationship-id 'customer004_fleet003'
