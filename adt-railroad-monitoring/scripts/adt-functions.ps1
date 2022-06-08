@@ -1,3 +1,11 @@
+<#
+    Before running this script, import the file ./scripts/adt-functions.ps1.
+    To run this script successfully, you must have Azure CLI (https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) installed.
+
+    Don't forget to login to Azure first :)
+    az login
+#>
+
 function New-TargetSensor {
     param (
         $dtname,
