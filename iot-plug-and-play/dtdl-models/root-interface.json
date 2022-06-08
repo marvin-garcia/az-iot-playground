@@ -1,0 +1,24 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:digital_transportation:root;1",
+    "@type": "Interface",
+    "displayName": "Root",
+    "description": "Example model for a company or root node",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "Name",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "@id": "dtmi:digital_transportation:rel_has_transportation_customers;1",
+        "name": "rel_has_transportation_customers",
+        "displayName": "Has Transportation Customers",
+        "target": "dtmi:digital_transportation:customer;1"
+      }
+    ]
+  }
+]
