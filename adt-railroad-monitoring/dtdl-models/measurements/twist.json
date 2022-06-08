@@ -1,0 +1,19 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:railmonitoring:measurements:twist;3",
+    "@type": "Interface",
+    "displayName": "Twist",
+    "description": "Sample model for a twist measurement",
+    "extends": "dtmi:railmonitoring:measurements:measurement;1",
+    "contents": [
+      {
+        "@type": "Relationship",
+        "@id": "dtmi:railmonitoring:measurements:twist:stations;1",
+        "name": "has_stations",
+        "displayName": "Has stations",
+        "target": "dtmi:railmonitoring:station;1"
+      }
+    ]
+  }
+]

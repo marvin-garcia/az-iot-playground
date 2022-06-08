@@ -1,0 +1,47 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:railmonitoring:sensor:target;1",
+    "@type": "Interface",
+    "displayName": "Target Sensor",
+    "description": "Sample model for a target sensor",
+    "contents": [
+      {
+        "@id": "dtmi:railmonitoring:sensor:target:northing;1",
+        "@type": [
+          "Property",
+          "Distance"
+        ],
+        "displayName": "northing",
+        "name": "northing",
+        "schema": "double",
+        "unit": "metre",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:railmonitoring:sensor:target:easting;1",
+        "@type": [
+          "Property",
+          "Distance"
+        ],
+        "displayName": "easting",
+        "name": "easting",
+        "schema": "double",
+        "unit": "metre",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:railmonitoring:sensor:target:elevation;1",
+        "@type": [
+          "Property",
+          "Distance"
+        ],
+        "displayName": "elevation",
+        "name": "elevation",
+        "schema": "double",
+        "unit": "metre",
+        "writable": true
+      }
+    ]
+  }
+]

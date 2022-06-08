@@ -1,0 +1,1280 @@
+{
+  "digitalTwinsFileInfo": {
+    "fileVersion": "1.0.0"
+  },
+  "digitalTwinsGraph": {
+    "digitalTwins": [
+      {
+        "$dtId": "root",
+        "$etag": "W/\"2b11d4ae-9c9c-4712-be80-91c0b3d4be76\"",
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:root;1"
+        }
+      },
+      {
+        "$dtId": "section_001",
+        "$etag": "W/\"9faf480a-a1db-4e1c-9e61-e742938244e5\"",
+        "id": "123-456-789",
+        "name": "Section 1",
+        "cantBasis": 4.5,
+        "firstStationDistance": 231512,
+        "stationDistance": 4.8,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:section;1"
+        }
+      },
+      {
+        "$dtId": "tenant_001",
+        "$etag": "W/\"4212ad6b-7d36-4a82-ba3f-00a7ab9c72d7\"",
+        "TenantId": "000-000-001",
+        "name": "Customer 001",
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:tenant;1"
+        }
+      },
+      {
+        "$dtId": "project_001",
+        "$etag": "W/\"fdc4fdad-56f4-4060-96f6-34be55fa876d\"",
+        "id": "123-456-789",
+        "name": "Project 001",
+        "timeZoneOffset": 2,
+        "timeZoneName": "South Africa Standard Time",
+        "unitSettings": "0xA30000008b000001000",
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:project;1"
+        }
+      },
+      {
+        "$dtId": "station_2",
+        "$etag": "W/\"be2da283-fa17-43f2-a422-92e2e80db9b7\"",
+        "number": 2,
+        "name": "station 2",
+        "type": "target",
+        "sideMovement": {
+          "value1": 10,
+          "value2": 15,
+          "$metadata": {
+            "value1": {
+              "lastUpdateTime": "2022-06-08T18:07:04.5808849Z"
+            },
+            "value2": {
+              "lastUpdateTime": "2022-06-08T18:07:04.5808849Z"
+            }
+          }
+        },
+        "cant": {
+          "value1": 8,
+          "value2": 9,
+          "$metadata": {
+            "value1": {
+              "lastUpdateTime": "2022-06-08T18:07:04.5808849Z"
+            },
+            "value2": {
+              "lastUpdateTime": "2022-06-08T18:07:04.5808849Z"
+            }
+          }
+        },
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:station;1"
+        }
+      },
+      {
+        "$dtId": "sensor_3",
+        "$etag": "W/\"685472e2-7c49-4478-be50-3824d9df7326\"",
+        "northing": 10,
+        "easting": 20,
+        "elevation": 30,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:sensor:target;1"
+        }
+      },
+      {
+        "$dtId": "sensor_4",
+        "$etag": "W/\"e98e12cb-50bd-442a-b3b2-1cb0fd2bc021\"",
+        "northing": 10,
+        "easting": 20,
+        "elevation": 30,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:sensor:target;1"
+        }
+      },
+      {
+        "$dtId": "station_3",
+        "$etag": "W/\"44918519-40bc-4df5-8aeb-59857c998f6e\"",
+        "number": 3,
+        "name": "station 3",
+        "type": "target",
+        "sideMovement": {
+          "value1": 10,
+          "value2": 15,
+          "$metadata": {
+            "value1": {
+              "lastUpdateTime": "2022-06-08T18:10:09.9993969Z"
+            },
+            "value2": {
+              "lastUpdateTime": "2022-06-08T18:10:09.9993969Z"
+            }
+          }
+        },
+        "cant": {
+          "value1": 8,
+          "value2": 9,
+          "$metadata": {
+            "value1": {
+              "lastUpdateTime": "2022-06-08T18:10:09.9993969Z"
+            },
+            "value2": {
+              "lastUpdateTime": "2022-06-08T18:10:09.9993969Z"
+            }
+          }
+        },
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:station;1"
+        }
+      },
+      {
+        "$dtId": "sensor_5",
+        "$etag": "W/\"8666540c-f44c-426d-8ba5-3421d3d18678\"",
+        "northing": 10,
+        "easting": 20,
+        "elevation": 30,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:sensor:target;1"
+        }
+      },
+      {
+        "$dtId": "sensor_6",
+        "$etag": "W/\"eb9a4af7-550f-41b3-9e08-4b239e80fb7a\"",
+        "northing": 10,
+        "easting": 20,
+        "elevation": 30,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:sensor:target;1"
+        }
+      },
+      {
+        "$dtId": "station_4",
+        "$etag": "W/\"c119180e-9565-462d-a993-dfd862016410\"",
+        "number": 4,
+        "name": "station 4",
+        "type": "target",
+        "sideMovement": {
+          "value1": 10,
+          "value2": 15,
+          "$metadata": {
+            "value1": {
+              "lastUpdateTime": "2022-06-08T18:10:42.6739307Z"
+            },
+            "value2": {
+              "lastUpdateTime": "2022-06-08T18:10:42.6739307Z"
+            }
+          }
+        },
+        "cant": {
+          "value1": 8,
+          "value2": 9,
+          "$metadata": {
+            "value1": {
+              "lastUpdateTime": "2022-06-08T18:10:42.6739307Z"
+            },
+            "value2": {
+              "lastUpdateTime": "2022-06-08T18:10:42.6739307Z"
+            }
+          }
+        },
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:station;1"
+        }
+      },
+      {
+        "$dtId": "sensor_7",
+        "$etag": "W/\"16bd289f-b811-4c73-9405-f22a999b49fa\"",
+        "tiltA": 8,
+        "tiltB": 12,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:sensor:tilt;1"
+        }
+      },
+      {
+        "$dtId": "station_5",
+        "$etag": "W/\"4dcfc8b2-6a08-4e04-89b4-043b1392735b\"",
+        "number": 5,
+        "name": "station 5",
+        "type": "target",
+        "sideMovement": {
+          "value1": 10,
+          "value2": 15,
+          "$metadata": {
+            "value1": {
+              "lastUpdateTime": "2022-06-08T18:11:16.7500499Z"
+            },
+            "value2": {
+              "lastUpdateTime": "2022-06-08T18:11:16.7500499Z"
+            }
+          }
+        },
+        "cant": {
+          "value1": 8,
+          "value2": 9,
+          "$metadata": {
+            "value1": {
+              "lastUpdateTime": "2022-06-08T18:11:16.7500499Z"
+            },
+            "value2": {
+              "lastUpdateTime": "2022-06-08T18:11:16.7500499Z"
+            }
+          }
+        },
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:station;1"
+        }
+      },
+      {
+        "$dtId": "sensor_8",
+        "$etag": "W/\"04c43fe7-022b-469b-82b1-9c4318c663bc\"",
+        "northing": 10,
+        "easting": 20,
+        "elevation": 30,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:sensor:target;1"
+        }
+      },
+      {
+        "$dtId": "sensor_9",
+        "$etag": "W/\"eb64e035-1af0-4e9d-a7c6-e95298e4011e\"",
+        "northing": 10,
+        "easting": 20,
+        "elevation": 30,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:sensor:target;1"
+        }
+      },
+      {
+        "$dtId": "station_1",
+        "$etag": "W/\"85a19d75-995f-4e8a-8333-5be37ef0cccd\"",
+        "number": 1,
+        "name": "station 1",
+        "type": "target",
+        "sideMovement": {
+          "value1": 10,
+          "value2": 15,
+          "$metadata": {
+            "value1": {
+              "lastUpdateTime": "2022-06-08T18:25:27.5598071Z"
+            },
+            "value2": {
+              "lastUpdateTime": "2022-06-08T18:25:27.5598071Z"
+            }
+          }
+        },
+        "cant": {
+          "value1": 8,
+          "value2": 9,
+          "$metadata": {
+            "value1": {
+              "lastUpdateTime": "2022-06-08T18:25:27.5598071Z"
+            },
+            "value2": {
+              "lastUpdateTime": "2022-06-08T18:25:27.5598071Z"
+            }
+          }
+        },
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:station;1"
+        }
+      },
+      {
+        "$dtId": "sensor_1",
+        "$etag": "W/\"fd002f70-c605-4364-b8c5-4b92dcbcccd3\"",
+        "northing": 10,
+        "easting": 20,
+        "elevation": 30,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:sensor:target;1"
+        }
+      },
+      {
+        "$dtId": "sensor_2",
+        "$etag": "W/\"71e19b28-81c5-413a-8031-f1a53ea50ded\"",
+        "northing": 10,
+        "easting": 20,
+        "elevation": 30,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:sensor:target;1"
+        }
+      },
+      {
+        "$dtId": "twist_1",
+        "$etag": "W/\"c235f656-8350-4ce3-959d-7c317900dca1\"",
+        "value1": 45,
+        "value2": 49,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:measurements:twist;3"
+        }
+      },
+      {
+        "$dtId": "twist_2",
+        "$etag": "W/\"a99e3c22-136b-404a-a2de-badac3d88fde\"",
+        "value1": 45,
+        "value2": 49,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:measurements:twist;3"
+        }
+      },
+      {
+        "$dtId": "twist_3",
+        "$etag": "W/\"0a5bb097-4df2-4d0a-be58-bb98a8d6156d\"",
+        "value1": 45,
+        "value2": 49,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:measurements:twist;3"
+        }
+      },
+      {
+        "$dtId": "twist_4",
+        "$etag": "W/\"df7a5d59-c5c3-489c-bd4c-c8804879d4e0\"",
+        "value1": 45,
+        "value2": 49,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:measurements:twist;3"
+        }
+      },
+      {
+        "$dtId": "v_versine_1",
+        "$etag": "W/\"04cf19d9-3b21-46e7-903a-fdace3656559\"",
+        "value1": 12,
+        "value2": 4,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:measurements:versine:vertical;3"
+        }
+      },
+      {
+        "$dtId": "v_versine_2",
+        "$etag": "W/\"b7c8f760-5f32-4a21-86ad-0814b8d100f4\"",
+        "value1": 12,
+        "value2": 4,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:measurements:versine:vertical;3"
+        }
+      },
+      {
+        "$dtId": "h_versine_1",
+        "$etag": "W/\"1cc55724-5cef-447e-8f6f-e0c2ec748bbf\"",
+        "value1": 3,
+        "value2": 9,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:measurements:versine:horizontal;2"
+        }
+      },
+      {
+        "$dtId": "h_versine_2",
+        "$etag": "W/\"5ce7b4e8-965e-4f01-959f-25260616045d\"",
+        "value1": 3,
+        "value2": 9,
+        "$metadata": {
+          "$model": "dtmi:railmonitoring:measurements:versine:horizontal;2"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "$relationshipId": "root_tenant_001",
+        "$sourceId": "root",
+        "$targetId": "tenant_001",
+        "$relationshipName": "has_tenants",
+        "$etag": "W/\"e0f940a4-6ecc-4bde-9060-1135f636e10f\""
+      },
+      {
+        "$relationshipId": "tenant_001_project_001",
+        "$sourceId": "tenant_001",
+        "$targetId": "project_001",
+        "$relationshipName": "has_projects",
+        "$etag": "W/\"b87647d5-e28b-4092-a01c-6d69451a0080\""
+      },
+      {
+        "$relationshipId": "station_2_sensor_3",
+        "$sourceId": "station_2",
+        "$targetId": "sensor_3",
+        "$relationshipName": "has_target_sensors",
+        "$etag": "W/\"4c1a0a82-dce9-463b-9692-3cb705f146e1\""
+      },
+      {
+        "$relationshipId": "station_2_sensor_4",
+        "$sourceId": "station_2",
+        "$targetId": "sensor_4",
+        "$relationshipName": "has_target_sensors",
+        "$etag": "W/\"2aaab974-2d78-417f-a0d6-5bc500ab1e2b\""
+      },
+      {
+        "$relationshipId": "project_001_section_001",
+        "$sourceId": "project_001",
+        "$targetId": "section_001",
+        "$relationshipName": "has_sections",
+        "$etag": "W/\"f1b63a69-1812-457c-9a04-d22644966258\""
+      },
+      {
+        "$relationshipId": "section_001_station_2",
+        "$sourceId": "section_001",
+        "$targetId": "station_2",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"ca759034-6674-4c56-ad25-4e9d675d4a83\""
+      },
+      {
+        "$relationshipId": "section_001_station_3",
+        "$sourceId": "section_001",
+        "$targetId": "station_3",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"97b3875c-23a1-450e-b2c2-5ca918d00363\""
+      },
+      {
+        "$relationshipId": "section_001_station_4",
+        "$sourceId": "section_001",
+        "$targetId": "station_4",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"6a63efca-bd60-4a66-842d-d5bd8b23a5b6\""
+      },
+      {
+        "$relationshipId": "section_001_station_5",
+        "$sourceId": "section_001",
+        "$targetId": "station_5",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"22327fb5-ab49-43ba-8fbd-5cb4e22df5b1\""
+      },
+      {
+        "$relationshipId": "section_001_station_1",
+        "$sourceId": "section_001",
+        "$targetId": "station_1",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"30a0eb2b-5ebf-4e5e-95c6-7bbfdbfda119\""
+      },
+      {
+        "$relationshipId": "section_001_twist_1",
+        "$sourceId": "section_001",
+        "$targetId": "twist_1",
+        "$relationshipName": "has_twists",
+        "$etag": "W/\"d1e3e05a-bc86-4e67-821b-16edf1fab98d\""
+      },
+      {
+        "$relationshipId": "section_001_twist_2",
+        "$sourceId": "section_001",
+        "$targetId": "twist_2",
+        "$relationshipName": "has_twists",
+        "$etag": "W/\"f5ffc277-e988-4e62-a0fe-d707f6fa2f2f\""
+      },
+      {
+        "$relationshipId": "section_001_twist_3",
+        "$sourceId": "section_001",
+        "$targetId": "twist_3",
+        "$relationshipName": "has_twists",
+        "$etag": "W/\"cb46fd7d-f76f-49c1-8e46-b8e9b87af0ca\""
+      },
+      {
+        "$relationshipId": "section_001_twist_4",
+        "$sourceId": "section_001",
+        "$targetId": "twist_4",
+        "$relationshipName": "has_twists",
+        "$etag": "W/\"7c9a2e70-17a9-4054-87a2-7b5d04567cbb\""
+      },
+      {
+        "$relationshipId": "section_001_v_versine_1",
+        "$sourceId": "section_001",
+        "$targetId": "v_versine_1",
+        "$relationshipName": "has_vertical_versine",
+        "$etag": "W/\"c9afa013-93f4-42fd-bf3c-6e70ed1e1cc1\""
+      },
+      {
+        "$relationshipId": "section_001_v_versine_2",
+        "$sourceId": "section_001",
+        "$targetId": "v_versine_2",
+        "$relationshipName": "has_vertical_versine",
+        "$etag": "W/\"a03940c7-b4b1-47f3-852a-a79480a0b838\""
+      },
+      {
+        "$relationshipId": "section_001_h_versine_1",
+        "$sourceId": "section_001",
+        "$targetId": "h_versine_1",
+        "$relationshipName": "has_horizontal_versine",
+        "$etag": "W/\"c62e4a53-52a7-4937-93d7-1f4c8b60ce99\""
+      },
+      {
+        "$relationshipId": "section_001_h_versine_2",
+        "$sourceId": "section_001",
+        "$targetId": "h_versine_2",
+        "$relationshipName": "has_horizontal_versine",
+        "$etag": "W/\"d8db94da-4723-4372-93ac-5b4316805a69\""
+      },
+      {
+        "$relationshipId": "station_4_sensor_7",
+        "$sourceId": "station_4",
+        "$targetId": "sensor_7",
+        "$relationshipName": "has_tilt_sensors",
+        "$etag": "W/\"fbc74337-2723-4c3c-a951-e91087c6ad3b\""
+      },
+      {
+        "$relationshipId": "station_5_sensor_8",
+        "$sourceId": "station_5",
+        "$targetId": "sensor_8",
+        "$relationshipName": "has_target_sensors",
+        "$etag": "W/\"8bf87b8e-beae-46ff-8f02-c5c090ec99b8\""
+      },
+      {
+        "$relationshipId": "station_5_sensor_9",
+        "$sourceId": "station_5",
+        "$targetId": "sensor_9",
+        "$relationshipName": "has_target_sensors",
+        "$etag": "W/\"1654f8f2-32bd-4b20-8f13-0b585a0916cb\""
+      },
+      {
+        "$relationshipId": "station_1_sensor_1",
+        "$sourceId": "station_1",
+        "$targetId": "sensor_1",
+        "$relationshipName": "has_target_sensors",
+        "$etag": "W/\"646138e4-03c3-48fd-8dba-583495ee623a\""
+      },
+      {
+        "$relationshipId": "station_1_sensor_2",
+        "$sourceId": "station_1",
+        "$targetId": "sensor_2",
+        "$relationshipName": "has_target_sensors",
+        "$etag": "W/\"2990466a-eb53-4528-ae2e-85275b996e8b\""
+      },
+      {
+        "$relationshipId": "station_3_sensor_5",
+        "$sourceId": "station_3",
+        "$targetId": "sensor_5",
+        "$relationshipName": "has_target_sensors",
+        "$etag": "W/\"8fd1beef-4e36-489f-9cbb-72ad5e742f62\""
+      },
+      {
+        "$relationshipId": "station_3_sensor_6",
+        "$sourceId": "station_3",
+        "$targetId": "sensor_6",
+        "$relationshipName": "has_target_sensors",
+        "$etag": "W/\"b4f73c2d-3d38-4780-b3b9-7dbb6f19449f\""
+      },
+      {
+        "$relationshipId": "station_1_twist_1",
+        "$sourceId": "twist_1",
+        "$targetId": "station_1",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"df05a5fd-569b-4d24-93b9-e6bf4f8df5e2\""
+      },
+      {
+        "$relationshipId": "station_2_twist_1",
+        "$sourceId": "twist_1",
+        "$targetId": "station_2",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"3ba734f0-297a-43e7-98b1-903144b478d6\""
+      },
+      {
+        "$relationshipId": "station_2_twist_2",
+        "$sourceId": "twist_2",
+        "$targetId": "station_2",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"0a0a7eae-d3ce-4603-9cf7-9c4f3ca6815a\""
+      },
+      {
+        "$relationshipId": "station_3_twist_2",
+        "$sourceId": "twist_2",
+        "$targetId": "station_3",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"57e2c01d-0fa4-4e4e-ac52-b249dddfba44\""
+      },
+      {
+        "$relationshipId": "station_3_twist_3",
+        "$sourceId": "twist_3",
+        "$targetId": "station_3",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"512e9213-9683-4070-a704-8196c1560cf9\""
+      },
+      {
+        "$relationshipId": "station_4_twist_3",
+        "$sourceId": "twist_3",
+        "$targetId": "station_4",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"9e6e9710-d31f-4f06-a113-da4f1c06fe02\""
+      },
+      {
+        "$relationshipId": "v_versine_1_station_1",
+        "$sourceId": "v_versine_1",
+        "$targetId": "station_1",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"ad66af1c-bf74-4ee7-a485-78f4abd8d2ff\""
+      },
+      {
+        "$relationshipId": "v_versine_1_station_2",
+        "$sourceId": "v_versine_1",
+        "$targetId": "station_2",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"d82b3cb6-13c7-4d83-a2a4-fbc3790a7a0c\""
+      },
+      {
+        "$relationshipId": "v_versine_1_station_3",
+        "$sourceId": "v_versine_1",
+        "$targetId": "station_3",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"b6218318-80f0-4068-9e27-73ae6c8175de\""
+      },
+      {
+        "$relationshipId": "station_4_twist_4",
+        "$sourceId": "twist_4",
+        "$targetId": "station_4",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"0d437a70-cf7a-432c-abe9-7f40f8dad597\""
+      },
+      {
+        "$relationshipId": "station_5_twist_4",
+        "$sourceId": "twist_4",
+        "$targetId": "station_5",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"8fd6049c-27af-4164-8e69-5f016c403988\""
+      },
+      {
+        "$relationshipId": "v_versine_2_station_4",
+        "$sourceId": "v_versine_2",
+        "$targetId": "station_4",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"d18281a9-9902-459d-8856-ec6dfdcf5ec8\""
+      },
+      {
+        "$relationshipId": "v_versine_2_station_5",
+        "$sourceId": "v_versine_2",
+        "$targetId": "station_5",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"43ab673f-8095-4b14-bdac-9455a15c6857\""
+      },
+      {
+        "$relationshipId": "h_versine_2_station_4",
+        "$sourceId": "h_versine_2",
+        "$targetId": "station_4",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"22949451-b642-4f57-8fec-ef0e3387cdf3\""
+      },
+      {
+        "$relationshipId": "h_versine_2_station_5",
+        "$sourceId": "h_versine_2",
+        "$targetId": "station_5",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"8a51c179-6986-454f-9c0c-5c40448c5932\""
+      },
+      {
+        "$relationshipId": "h_versine_1_station_1",
+        "$sourceId": "h_versine_1",
+        "$targetId": "station_1",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"0daab859-1953-431e-8155-960f16122f1c\""
+      },
+      {
+        "$relationshipId": "h_versine_1_station_2",
+        "$sourceId": "h_versine_1",
+        "$targetId": "station_2",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"e86a2275-436e-4c14-83c7-cb7da8be5a3a\""
+      },
+      {
+        "$relationshipId": "h_versine_1_station_3",
+        "$sourceId": "h_versine_1",
+        "$targetId": "station_3",
+        "$relationshipName": "has_stations",
+        "$etag": "W/\"104d0a80-ee36-4a0c-931b-50d217094d2a\""
+      }
+    ]
+  },
+  "digitalTwinsModels": [
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:project;1",
+      "@type": "Interface",
+      "displayName": "Project",
+      "description": "Sample model for a railway project",
+      "contents": [
+        {
+          "@id": "dtmi:railmonitoring:project:id;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Id",
+          "name": "id",
+          "schema": "string",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:project:name;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Name",
+          "name": "name",
+          "schema": "string",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:project:time_zone_offset;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Time Zone Offset",
+          "name": "timeZoneOffset",
+          "schema": "double",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:project:time_zone_name;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Time Zone Name",
+          "name": "timeZoneName",
+          "schema": "string",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:project:unit_settings;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Unit Settings",
+          "name": "unitSettings",
+          "schema": "string",
+          "writable": true
+        },
+        {
+          "@type": "Relationship",
+          "@id": "dtmi:railmonitoring:project:sections;1",
+          "name": "has_sections",
+          "displayName": "Has Railway Sections",
+          "target": "dtmi:railmonitoring:section;1"
+        }
+      ]
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:root;1",
+      "@type": "Interface",
+      "displayName": "Root",
+      "description": "Sample model for root model",
+      "contents": [
+        {
+          "@type": "Relationship",
+          "@id": "dtmi:railmonitoring:tenant:tenants;1",
+          "name": "has_tenants",
+          "displayName": "Has Tenants",
+          "target": "dtmi:railmonitoring:tenant;1"
+        }
+      ]
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:tenant;1",
+      "@type": "Interface",
+      "displayName": "Tenant",
+      "description": "Sample model for a railway tenant",
+      "contents": [
+        {
+          "@id": "dtmi:railmonitoring:tenant:id;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Tenant Id",
+          "name": "TenantId",
+          "schema": "string",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:tenant:name;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Name",
+          "name": "name",
+          "schema": "string",
+          "writable": true
+        },
+        {
+          "@type": "Relationship",
+          "@id": "dtmi:railmonitoring:tenant:projects;1",
+          "name": "has_projects",
+          "displayName": "Has Railway Projects",
+          "target": "dtmi:railmonitoring:project;1"
+        }
+      ]
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:section;1",
+      "@type": "Interface",
+      "displayName": "Railway Section",
+      "description": "Sample model for a railway section monitoring object",
+      "contents": [
+        {
+          "@id": "dtmi:railmonitoring:section:id;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Id",
+          "name": "id",
+          "schema": "string",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:section:name;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Name",
+          "name": "name",
+          "schema": "string",
+          "writable": true
+        },
+        {
+          "@type": [
+            "Property",
+            "Latitude"
+          ],
+          "name": "latitude",
+          "schema": "double",
+          "unit": "degreeOfArc"
+        },
+        {
+          "@type": [
+            "Property",
+            "Longitude"
+          ],
+          "name": "longitude",
+          "schema": "double",
+          "unit": "degreeOfArc"
+        },
+        {
+          "@id": "dtmi:railmonitoring:section:cant_basis;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Cant Basis",
+          "name": "cantBasis",
+          "schema": "double",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:section:first_station_distance;1",
+          "@type": [
+            "Property",
+            "Distance"
+          ],
+          "displayName": "First Station Distance",
+          "name": "firstStationDistance",
+          "schema": "double",
+          "unit": "metre",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:section:station_distance;1",
+          "@type": [
+            "Property",
+            "Distance"
+          ],
+          "displayName": "Station Distance",
+          "name": "stationDistance",
+          "schema": "double",
+          "unit": "metre",
+          "writable": true
+        },
+        {
+          "@type": "Relationship",
+          "@id": "dtmi:railmonitoring:section:stations;1",
+          "name": "has_stations",
+          "displayName": "Has stations",
+          "target": "dtmi:railmonitoring:station;1"
+        },
+        {
+          "@type": "Relationship",
+          "@id": "dtmi:railmonitoring:section:twists;1",
+          "name": "has_twists",
+          "displayName": "Has twist measurements",
+          "target": "dtmi:railmonitoring:measurements:twist;1"
+        },
+        {
+          "@type": "Relationship",
+          "@id": "dtmi:railmonitoring:section:vertical_versine;1",
+          "name": "has_vertical_versine",
+          "displayName": "Has vertical versine measurements",
+          "target": "dtmi:railmonitoring:measurements:versine:vertical;1"
+        },
+        {
+          "@type": "Relationship",
+          "@id": "dtmi:railmonitoring:section:horizontal_versine;1",
+          "name": "has_horizontal_versine",
+          "displayName": "Has horizontal versine measurements",
+          "target": "dtmi:railmonitoring:measurements:versine:horizontal;1"
+        }
+      ]
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:sensor:target;1",
+      "@type": "Interface",
+      "displayName": "Target Sensor",
+      "description": "Sample model for a target sensor",
+      "contents": [
+        {
+          "@id": "dtmi:railmonitoring:sensor:target:northing;1",
+          "@type": [
+            "Property",
+            "Distance"
+          ],
+          "displayName": "northing",
+          "name": "northing",
+          "schema": "double",
+          "unit": "metre",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:sensor:target:easting;1",
+          "@type": [
+            "Property",
+            "Distance"
+          ],
+          "displayName": "easting",
+          "name": "easting",
+          "schema": "double",
+          "unit": "metre",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:sensor:target:elevation;1",
+          "@type": [
+            "Property",
+            "Distance"
+          ],
+          "displayName": "elevation",
+          "name": "elevation",
+          "schema": "double",
+          "unit": "metre",
+          "writable": true
+        }
+      ]
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:sensor:tilt;1",
+      "@type": "Interface",
+      "displayName": "Tilt Sensor",
+      "description": "Sample model for a tilt sensor",
+      "contents": [
+        {
+          "@id": "dtmi:railmonitoring:sensor:tilt:A;1",
+          "@type": [
+            "Property",
+            "Angle"
+          ],
+          "displayName": "tiltA",
+          "name": "tiltA",
+          "schema": "double",
+          "unit": "degreeOfArc",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:sensor:tilt:B;1",
+          "@type": [
+            "Property",
+            "Angle"
+          ],
+          "displayName": "tiltB",
+          "name": "tiltB",
+          "schema": "double",
+          "unit": "degreeOfArc",
+          "writable": true
+        }
+      ]
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:measurements:cant;1",
+      "@type": "Interface",
+      "displayName": "Cant",
+      "description": "Sample model for a cant measurement",
+      "contents": [
+        {
+          "@id": "dtmi:railmonitoring:measurements:cant:value1;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Value 1",
+          "name": "value1",
+          "schema": "double",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:measurements:cant:value2;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Value 2",
+          "name": "value2",
+          "schema": "double",
+          "writable": true
+        }
+      ]
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:measurements:side_movement;1",
+      "@type": "Interface",
+      "displayName": "Side Movement",
+      "description": "Sample model for a side movement measurement",
+      "contents": [
+        {
+          "@id": "dtmi:railmonitoring:measurements:side_movement:value1;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Value 1",
+          "name": "value1",
+          "schema": "double",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:measurements:side_movement:value2;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Value 2",
+          "name": "value2",
+          "schema": "double",
+          "writable": true
+        }
+      ]
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:measurement;1",
+      "@type": "Interface",
+      "displayName": "Measurement",
+      "description": "Sample model for a generic measurement",
+      "contents": [
+        {
+          "@id": "dtmi:railmonitoring:measurement:value1;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Value 1",
+          "name": "value1",
+          "schema": "double",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:measurement:value2;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Value 2",
+          "name": "value2",
+          "schema": "double",
+          "writable": true
+        }
+      ]
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:measurements:cant;2",
+      "@type": "Interface",
+      "displayName": "Cant",
+      "extends": "dtmi:railmonitoring:measurement;1"
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:measurements:measurement;1",
+      "@type": "Interface",
+      "displayName": "Measurement",
+      "description": "Sample model for a generic measurement",
+      "contents": [
+        {
+          "@id": "dtmi:railmonitoring:measurements:measurement:value1;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Value 1",
+          "name": "value1",
+          "schema": "double",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:measurements:measurement:value2;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Value 2",
+          "name": "value2",
+          "schema": "double",
+          "writable": true
+        }
+      ]
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:measurements:cant;3",
+      "@type": "Interface",
+      "displayName": "Cant",
+      "extends": "dtmi:railmonitoring:measurements:measurement;1"
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:measurements:side_movement;2",
+      "@type": "Interface",
+      "displayName": "Side Movement",
+      "description": "Sample model for a side movement measurement",
+      "extends": "dtmi:railmonitoring:measurements:measurement;1"
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:station;1",
+      "@type": "Interface",
+      "displayName": "station",
+      "description": "Sample model for a station",
+      "contents": [
+        {
+          "@id": "dtmi:railmonitoring:station:number;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Number",
+          "name": "number",
+          "schema": "integer",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:station:name;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Name",
+          "name": "name",
+          "schema": "string",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:railmonitoring:station:type;1",
+          "@type": [
+            "Property"
+          ],
+          "displayName": "Type",
+          "name": "type",
+          "schema": "string",
+          "writable": true
+        },
+        {
+          "@type": "Component",
+          "name": "sideMovement",
+          "schema": "dtmi:railmonitoring:measurements:side_movement;1",
+          "displayName": "Side movement",
+          "description": "Calculated side movement"
+        },
+        {
+          "@type": "Component",
+          "name": "cant",
+          "schema": "dtmi:railmonitoring:measurements:cant;1",
+          "displayName": "Cant",
+          "description": "Calculated cant"
+        },
+        {
+          "@type": "Relationship",
+          "@id": "dtmi:railmonitoring:station:target_sensors;1",
+          "name": "has_target_sensors",
+          "displayName": "Has Target Sensors",
+          "target": "dtmi:railmonitoring:sensor:target;1"
+        },
+        {
+          "@type": "Relationship",
+          "@id": "dtmi:railmonitoring:station:tilt_sensors;1",
+          "name": "has_tilt_sensors",
+          "displayName": "Has Tilt Sensors",
+          "target": "dtmi:railmonitoring:sensor:tilt;1"
+        }
+      ]
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:measurements:twist;3",
+      "@type": "Interface",
+      "displayName": "Twist",
+      "description": "Sample model for a twist measurement",
+      "extends": "dtmi:railmonitoring:measurements:measurement;1",
+      "contents": [
+        {
+          "@type": "Relationship",
+          "@id": "dtmi:railmonitoring:measurements:twist:stations;1",
+          "name": "has_stations",
+          "displayName": "Has stations",
+          "target": "dtmi:railmonitoring:station;1"
+        }
+      ]
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:measurements:versine:horizontal;2",
+      "@type": "Interface",
+      "displayName": "Horizontal Versine Measurement",
+      "description": "Sample model for a horizontal versine measurement",
+      "extends": "dtmi:railmonitoring:measurements:measurement;1",
+      "contents": [
+        {
+          "@type": "Relationship",
+          "@id": "dtmi:railmonitoring:measurements:versine:horizontal:stations;1",
+          "name": "has_stations",
+          "displayName": "Has stations",
+          "target": "dtmi:railmonitoring:station;1"
+        }
+      ]
+    },
+    {
+      "@context": [
+        "dtmi:dtdl:context;2"
+      ],
+      "@id": "dtmi:railmonitoring:measurements:versine:vertical;3",
+      "@type": "Interface",
+      "displayName": "Vertical Versine Measurement",
+      "description": "Sample model for a vertical versine measurement",
+      "extends": "dtmi:railmonitoring:measurements:measurement;1",
+      "contents": [
+        {
+          "@type": "Relationship",
+          "@id": "dtmi:railmonitoring:measurements:versine:vertical:stations;1",
+          "name": "has_stations",
+          "displayName": "Has stations",
+          "target": "dtmi:railmonitoring:station;1"
+        }
+      ]
+    }
+  ]
+}

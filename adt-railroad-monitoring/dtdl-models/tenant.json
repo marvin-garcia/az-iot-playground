@@ -1,0 +1,38 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:railmonitoring:tenant;1",
+    "@type": "Interface",
+    "displayName": "Tenant",
+    "description": "Sample model for a railway tenant",
+    "contents": [
+      {
+        "@id": "dtmi:railmonitoring:tenant:id;1",
+        "@type": [
+          "Property"
+        ],
+        "displayName": "Tenant Id",
+        "name": "TenantId",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:railmonitoring:tenant:name;1",
+        "@type": [
+          "Property"
+        ],
+        "displayName": "Name",
+        "name": "name",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "@id": "dtmi:railmonitoring:tenant:projects;1",
+        "name": "has_projects",
+        "displayName": "Has Railway Projects",
+        "target": "dtmi:railmonitoring:project;1"
+      }
+    ]
+  }
+]

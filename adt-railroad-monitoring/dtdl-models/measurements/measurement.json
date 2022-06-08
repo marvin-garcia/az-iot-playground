@@ -1,0 +1,31 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:railmonitoring:measurements:measurement;1",
+    "@type": "Interface",
+    "displayName": "Measurement",
+    "description": "Sample model for a generic measurement",
+    "contents": [
+      {
+        "@id": "dtmi:railmonitoring:measurements:measurement:value1;1",
+        "@type": [
+          "Property"
+        ],
+        "displayName": "Value 1",
+        "name": "value1",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:railmonitoring:measurements:measurement:value2;1",
+        "@type": [
+          "Property"
+        ],
+        "displayName": "Value 2",
+        "name": "value2",
+        "schema": "double",
+        "writable": true
+      }
+    ]
+  }
+]

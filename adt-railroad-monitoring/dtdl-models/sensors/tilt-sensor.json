@@ -1,0 +1,35 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:railmonitoring:sensor:tilt;1",
+    "@type": "Interface",
+    "displayName": "Tilt Sensor",
+    "description": "Sample model for a tilt sensor",
+    "contents": [
+      {
+        "@id": "dtmi:railmonitoring:sensor:tilt:A;1",
+        "@type": [
+          "Property",
+          "Angle"
+        ],
+        "displayName": "tiltA",
+        "name": "tiltA",
+        "schema": "double",
+        "unit": "degreeOfArc",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:railmonitoring:sensor:tilt:B;1",
+        "@type": [
+          "Property",
+          "Angle"
+        ],
+        "displayName": "tiltB",
+        "name": "tiltB",
+        "schema": "double",
+        "unit": "degreeOfArc",
+        "writable": true
+      }
+    ]
+  }
+]

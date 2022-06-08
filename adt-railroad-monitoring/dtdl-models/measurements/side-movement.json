@@ -1,0 +1,10 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:railmonitoring:measurements:side_movement;2",
+    "@type": "Interface",
+    "displayName": "Side Movement",
+    "description": "Sample model for a side movement measurement",
+    "extends": "dtmi:railmonitoring:measurements:measurement;1"
+  }
+]

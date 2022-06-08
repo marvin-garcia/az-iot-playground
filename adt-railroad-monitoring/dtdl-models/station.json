@@ -1,0 +1,69 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:railmonitoring:station;1",
+    "@type": "Interface",
+    "displayName": "station",
+    "description": "Sample model for a station",
+    "contents": [
+      {
+        "@id": "dtmi:railmonitoring:station:number;1",
+        "@type": [
+          "Property"
+        ],
+        "displayName": "Number",
+        "name": "number",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:railmonitoring:station:name;1",
+        "@type": [
+          "Property"
+        ],
+        "displayName": "Name",
+        "name": "name",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:railmonitoring:station:type;1",
+        "@type": [
+          "Property"
+        ],
+        "displayName": "Type",
+        "name": "type",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Component",
+        "name": "sideMovement",
+        "schema": "dtmi:railmonitoring:measurements:side_movement;1",
+        "displayName": "Side movement",
+        "description": "Calculated side movement"
+      },
+      {
+        "@type": "Component",
+        "name": "cant",
+        "schema": "dtmi:railmonitoring:measurements:cant;1",
+        "displayName": "Cant",
+        "description": "Calculated cant"
+      },
+      {
+        "@type": "Relationship",
+        "@id": "dtmi:railmonitoring:station:target_sensors;1",
+        "name": "has_target_sensors",
+        "displayName": "Has Target Sensors",
+        "target": "dtmi:railmonitoring:sensor:target;1"
+      },
+      {
+        "@type": "Relationship",
+        "@id": "dtmi:railmonitoring:station:tilt_sensors;1",
+        "name": "has_tilt_sensors",
+        "displayName": "Has Tilt Sensors",
+        "target": "dtmi:railmonitoring:sensor:tilt;1"
+      }
+    ]
+  }
+]

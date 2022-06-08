@@ -1,0 +1,19 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:railmonitoring:measurements:versine:horizontal;2",
+    "@type": "Interface",
+    "displayName": "Horizontal Versine Measurement",
+    "description": "Sample model for a horizontal versine measurement",
+    "extends": "dtmi:railmonitoring:measurements:measurement;1",
+    "contents": [
+      {
+        "@type": "Relationship",
+        "@id": "dtmi:railmonitoring:measurements:versine:horizontal:stations;1",
+        "name": "has_stations",
+        "displayName": "Has stations",
+        "target": "dtmi:railmonitoring:station;1"
+      }
+    ]
+  }
+]

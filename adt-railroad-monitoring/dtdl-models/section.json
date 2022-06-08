@@ -1,0 +1,111 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:railmonitoring:section;1",
+    "@type": "Interface",
+    "displayName": "Railway Section",
+    "description": "Sample model for a railway section monitoring object",
+    "contents": [
+      {
+        "@id": "dtmi:railmonitoring:section:id;1",
+        "@type": [
+          "Property"
+        ],
+        "displayName": "Id",
+        "name": "id",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:railmonitoring:section:name;1",
+        "@type": [
+          "Property"
+        ],
+        "displayName": "Name",
+        "name": "name",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": [
+          "Property",
+          "Latitude"
+        ],
+        "name": "latitude",
+        "schema": "double",
+        "unit": "degreeOfArc"
+      },
+      {
+        "@type": [
+          "Property",
+          "Longitude"
+        ],
+        "name": "longitude",
+        "schema": "double",
+        "unit": "degreeOfArc"
+      },
+      {
+        "@id": "dtmi:railmonitoring:section:cant_basis;1",
+        "@type": [
+          "Property"
+        ],
+        "displayName": "Cant Basis",
+        "name": "cantBasis",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:railmonitoring:section:first_station_distance;1",
+        "@type": [
+          "Property",
+          "Distance"
+        ],
+        "displayName": "First Station Distance",
+        "name": "firstStationDistance",
+        "schema": "double",
+        "unit": "metre",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:railmonitoring:section:station_distance;1",
+        "@type": [
+          "Property",
+          "Distance"
+        ],
+        "displayName": "Station Distance",
+        "name": "stationDistance",
+        "schema": "double",
+        "unit": "metre",
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "@id": "dtmi:railmonitoring:section:stations;1",
+        "name": "has_stations",
+        "displayName": "Has stations",
+        "target": "dtmi:railmonitoring:station;1"
+      },
+      {
+        "@type": "Relationship",
+        "@id": "dtmi:railmonitoring:section:twists;1",
+        "name": "has_twists",
+        "displayName": "Has twist measurements",
+        "target": "dtmi:railmonitoring:measurements:twist;1"
+      },
+      {
+        "@type": "Relationship",
+        "@id": "dtmi:railmonitoring:section:vertical_versine;1",
+        "name": "has_vertical_versine",
+        "displayName": "Has vertical versine measurements",
+        "target": "dtmi:railmonitoring:measurements:versine:vertical;1"
+      },
+      {
+        "@type": "Relationship",
+        "@id": "dtmi:railmonitoring:section:horizontal_versine;1",
+        "name": "has_horizontal_versine",
+        "displayName": "Has horizontal versine measurements",
+        "target": "dtmi:railmonitoring:measurements:versine:horizontal;1"
+      }
+    ]
+  }
+]

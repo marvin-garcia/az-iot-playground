@@ -1,0 +1,9 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:railmonitoring:measurements:cant;3",
+    "@type": "Interface",
+    "displayName": "Cant",
+    "extends": "dtmi:railmonitoring:measurements:measurement;1"
+  }
+]
