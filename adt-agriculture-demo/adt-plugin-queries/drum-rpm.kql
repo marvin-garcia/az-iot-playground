@@ -1,0 +1,18 @@
+let ADTendpoint = 'https://marv-dt.api.eus.digitaltwins.azure.net';
+let customerId = 'customer001';
+let ADTquery = strcat(
+```SELECT customer, farm, tractor FROM DigitalTwins
+customer JOIN farm RELATED customer.rel_has_farms
+JOIN tractor RELATED farm.rel_has_tractors
+WHERE customer.$dtId = '```, customerId, ```'```);
+let tractors = evaluate azure_digital_twins_query_request(ADTendpoint, ADTquery)
+| extend c = parse_json(customer), f = parse_json(farm), t = parse_json(tractor)
+| project tractorId = t.$dtId;
+adt_dh_marv_dt_eastus
+| where TimeStamp >= datetime(2022-09-02T18:21:03.199Z) and TimeStamp <= datetime(2022-09-02T18:36:03.199Z)
+| where Id in(tractors)
+| where Key == 'harvestingDrumRpm'
+| extend Value_double = todouble(Value) 
+| summarize drum_rpm = avg(Value_double) by bin(TimeStamp, 10m), Id
+| sort by TimeStamp asc
+| render timechart 

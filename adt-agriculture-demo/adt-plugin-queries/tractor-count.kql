@@ -1,0 +1,11 @@
+let ADTendpoint = 'https://marv-dt.api.eus.digitaltwins.azure.net';
+let customerId = 'customer001';
+let ADTquery = strcat(
+```SELECT customer, farm, tractor FROM DigitalTwins
+customer JOIN farm RELATED customer.rel_has_farms
+JOIN tractor RELATED farm.rel_has_tractors
+WHERE customer.$dtId = '```, customerId, ```'```);
+evaluate azure_digital_twins_query_request(ADTendpoint, ADTquery)
+| extend c = parse_json(customer), f = parse_json(farm), t = parse_json(tractor)
+| project customers = c.$dtId, countries = c.Country, tractors = t.$dtId
+| summarize count() 
